@@ -31,6 +31,16 @@ body {
 	display: none;
 }
 
+#dropdowncontainer:hover {
+	display: flex;
+	flex-direction: column;
+	background-color: beige;
+	gap: 5px;
+}
+
+#dropdownitem:hover {
+	display: flex;
+}
 #visible {
 	display: flex;
 	flex-direction: column;
