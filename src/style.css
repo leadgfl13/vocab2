@@ -29,9 +29,29 @@ body {
 	flex-direction: Column;
 }
 
-#carouselcontainer {
+#leftright {
+	display: flex;
 	height: 60%;
 	width: 100%;
+	flex-direction: row;
+}
+
+#left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 0.2;
+	text-align: center;
+}
+#right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 0.2;
+	text-align: center;
+}
+#carouselcontainer {
+	flex-grow: 0.8;
 	display: flex;
 	margin: auto;
 	border: 2px black solid;
