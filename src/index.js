@@ -1,4 +1,5 @@
 import "./style.css";
+import { moveCarousel } from "./modules/item1";
 import { sayHello } from "./modules/item1";
 import { Menu2 } from "./modules/item1";
 import { menu3 } from "./modules/item1";
