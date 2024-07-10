@@ -1,5 +1,8 @@
 import "./style.css";
 import { sayHello } from "./modules/item1";
+import { Menu2 } from "./modules/item1";
+import { menu3 } from "./modules/item1";
+
 //Glocal variables on main page
 let menu = document.getElementById("menubutton");
 let item1 = document.getElementById("dropdown1");
@@ -11,12 +14,26 @@ let bottomright = document.getElementById("bottomright");
 //
 let dropdowns = [item1, item2, item3, item4];
 
-for (let i = 0; i < dropdowns.length; i++) {
-	dropdowns[i].addEventListener("click", () => {
-		alert("I have been clicked");
-		sayHello();
-	});
-}
+//for (let i = 0; i < dropdowns.length; i++) {
+//	dropdowns[i].addEventListener("click", () => {
+//		alert("I have been clicked");
+//		sayHello();
+//	});
+//}
+
+// individual event listeners for each dropdown menu item
+
+item1.addEventListener("click", () => {
+	sayHello();
+});
+
+item2.addEventListener("click", () => {
+	Menu2();
+});
+
+item3.addEventListener("click", () => {
+	menu3();
+});
 
 // loading module for each dropdown item
 
