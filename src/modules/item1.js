@@ -18,13 +18,32 @@ export function menu3() {
 
 export default (function moveCarousel() {
 	let images = [image1, image2, image3];
+	let counter = 0;
+	carouselcontainer.style.backgroundImage = images[counter];
+
 	let leftarrow = document.getElementById("left");
 	let rightarrow = document.getElementById("right");
 	leftarrow.addEventListener("click", () => {
-		alert("left has been clicked");
+		if (counter == 0) {
+			counter = images.length + 1;
+		} else {
+			counter = counter - 1;
+		}
+		carouselcontainer.style.background = images[counter];
+		console.log(counter);
+
+		return counter;
 	});
 
 	rightarrow.addEventListener("click", () => {
-		alert("right has been clicked");
+		if (counter == images.length + 1) {
+			counter = 0;
+		} else {
+			counter = counter + 1;
+		}
+		carouselcontainer.style.background = images[counter];
+		console.log(counter);
+
+		return counter;
 	});
 })();
