@@ -65,6 +65,8 @@ body {
 	background-size: cover;
 }
 #carouseldots {
+	gap: 10px;
+	padding-top: 10px;
 	height: 40%;
 	width: 100%;
 	display: flex;
@@ -72,6 +74,13 @@ body {
 	align-items: flex-start;
 	border: 2px green solid;
 	text-align: Center;
+}
+
+.circle {
+	height: 40px;
+	width: 24px;
+	border-radius: 16px;
+	background-color: gray;
 }
 #dropdowncontainer {
 	display: none;
