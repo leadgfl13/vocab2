@@ -76,6 +76,10 @@ body {
 	text-align: Center;
 }
 
+#dots {
+	background-color: blue;
+}
+
 .circle {
 	height: 40px;
 	width: 24px;

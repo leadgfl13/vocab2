@@ -22,8 +22,19 @@ export default (function moveCarousel() {
 
 	//creates dots for carousel and adds them to the page
 	for (let i = 0; i < images.length; i++) {
+		let dotcounter = i;
 		let dot = document.createElement("div");
 		dot.setAttribute("class", "circle");
+		dot.setAttribute("id", "dots" + i);
+		//function to make dot click and showcase the corresponding image
+		dot.addEventListener("click", () => {
+			counter = i;
+			console.log(counter);
+			//need to update image
+			carouselcontainer.style.background = images[counter];
+
+			return counter;
+		});
 		let carouseldots = document.getElementById("carouseldots");
 		carouseldots.append(dot);
 	}
@@ -35,12 +46,18 @@ export default (function moveCarousel() {
 	let leftarrow = document.getElementById("left");
 	let rightarrow = document.getElementById("right");
 	leftarrow.addEventListener("click", () => {
+		let currentdot = document.getElementById("dots" + counter);
+
+		currentdot.style.backgroundColor = "gray";
+
 		if (counter == 0) {
 			counter = images.length - 1;
 		} else {
 			counter = counter - 1;
 		}
 		carouselcontainer.style.background = images[counter];
+		currentdot.style.backgroundColor = "red";
+
 		console.log(counter);
 
 		return counter;
