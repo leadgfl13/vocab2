@@ -22,7 +22,6 @@ export default (function moveCarousel() {
 
 	//creates dots for carousel and adds them to the page
 	for (let i = 0; i < images.length; i++) {
-		let dotcounter = i;
 		let dot = document.createElement("div");
 		dot.setAttribute("class", "circle");
 		dot.setAttribute("id", "dots" + i);
@@ -32,34 +31,30 @@ export default (function moveCarousel() {
 			console.log(counter);
 			//need to update image
 			carouselcontainer.style.background = images[counter];
+			checkDots();
 
 			return counter;
 		});
 		let carouseldots = document.getElementById("carouseldots");
 		carouseldots.append(dot);
+		checkDots();
 	}
 	//sets defaults image to 0
 	carouselcontainer.style.backgroundImage = images[counter];
-
 	//functions for left and right arrow, and changing counter
 
 	let leftarrow = document.getElementById("left");
 	let rightarrow = document.getElementById("right");
 	leftarrow.addEventListener("click", () => {
-		let currentdot = document.getElementById("dots" + counter);
-
-		currentdot.style.backgroundColor = "gray";
-
 		if (counter == 0) {
 			counter = images.length - 1;
 		} else {
 			counter = counter - 1;
 		}
 		carouselcontainer.style.background = images[counter];
-		currentdot.style.backgroundColor = "red";
 
 		console.log(counter);
-
+		checkDots();
 		return counter;
 	});
 
@@ -71,7 +66,22 @@ export default (function moveCarousel() {
 		}
 		carouselcontainer.style.background = images[counter];
 		console.log(counter);
-
+		checkDots();
 		return counter;
 	});
+	//resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
+	function checkDots() {
+		for (let i = 0; i < images.length; i++) {
+			if (counter == i) {
+				let dots = document.getElementsByClassName("circle");
+				for (let i = 0; i < dots.length; i++) {
+					dots[i].style.backgroundColor = "gray";
+				}
+				let thisdot = document.getElementById("dots" + i);
+				thisdot.style.backgroundColor = "red";
+			}
+		}
+	}
 })();
+
+//check whatever image index is currenty in the div, then make
