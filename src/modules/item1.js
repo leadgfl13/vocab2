@@ -51,6 +51,14 @@ export default (function moveCarousel() {
 	var keys = Object.keys(unit1_vocab);
 	var values = Object.values(unit1_vocab);
 	carouselcontainer.innerHTML = keys[counter];
+	carouselcontainer.addEventListener("click", () => {
+		console.log("teehee");
+		if (carouselcontainer.innerHTML == keys[counter]) {
+			carouselcontainer.innerHTML = values[counter];
+		} else if (carouselcontainer.innerHTML == values[counter]) {
+			carouselcontainer.innerHTML = keys[counter];
+		}
+	});
 
 	console.log(keys);
 	console.log(values);
