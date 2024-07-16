@@ -17,6 +17,12 @@ export function menu3() {
 }
 
 export default (function moveCarousel() {
+	const unit1_vocab = {
+		Word1: "Definition 1",
+		word2: "This is word2",
+		word3: "this is word 3",
+	};
+
 	let images = [image1, image2, image3];
 	let counter = 0;
 
@@ -40,9 +46,17 @@ export default (function moveCarousel() {
 		checkDots();
 	}
 	//sets defaults image to 0
-	carouselcontainer.style.backgroundImage = images[counter];
-	//functions for left and right arrow, and changing counter
+	//for the background image---------carouselcontainer.style.backgroundImage = images[counter];
+	//creates an array of keys and values from the unit 1 object
+	var keys = Object.keys(unit1_vocab);
+	var values = Object.values(unit1_vocab);
+	carouselcontainer.innerHTML = keys[counter];
 
+	console.log(keys);
+	console.log(values);
+	console.log(keys[counter]);
+
+	//functions for left and right arrow, and changing counter
 	let leftarrow = document.getElementById("left");
 	let rightarrow = document.getElementById("right");
 	leftarrow.addEventListener("click", () => {
