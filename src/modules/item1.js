@@ -25,7 +25,9 @@ export default (function moveCarousel() {
 
 	let images = [image1, image2, image3];
 	let counter = 0;
-
+	var keys = Object.keys(unit1_vocab);
+	var values = Object.values(unit1_vocab);
+	carouselcontainer.innerHTML = keys[counter];
 	//creates dots for carousel and adds them to the page
 	for (let i = 0; i < images.length; i++) {
 		let dot = document.createElement("div");
@@ -36,7 +38,7 @@ export default (function moveCarousel() {
 			counter = i;
 			console.log(counter);
 			//need to update image
-			carouselcontainer.style.background = images[counter];
+			carouselcontainer.innerHTML = keys[counter];
 			checkDots();
 
 			return counter;
@@ -48,9 +50,8 @@ export default (function moveCarousel() {
 	//sets defaults image to 0
 	//for the background image---------carouselcontainer.style.backgroundImage = images[counter];
 	//creates an array of keys and values from the unit 1 object
-	var keys = Object.keys(unit1_vocab);
-	var values = Object.values(unit1_vocab);
-	carouselcontainer.innerHTML = keys[counter];
+
+	//on click will switch between key and value pair
 	carouselcontainer.addEventListener("click", () => {
 		console.log("teehee");
 		if (carouselcontainer.innerHTML == keys[counter]) {
@@ -69,11 +70,11 @@ export default (function moveCarousel() {
 	let rightarrow = document.getElementById("right");
 	leftarrow.addEventListener("click", () => {
 		if (counter == 0) {
-			counter = images.length - 1;
+			counter = keys.length - 1;
 		} else {
 			counter = counter - 1;
 		}
-		carouselcontainer.style.background = images[counter];
+		carouselcontainer.innerHTML = keys[counter];
 
 		console.log(counter);
 		checkDots();
@@ -81,19 +82,19 @@ export default (function moveCarousel() {
 	});
 
 	rightarrow.addEventListener("click", () => {
-		if (counter == images.length - 1) {
+		if (counter == keys.length - 1) {
 			counter = 0;
 		} else {
 			counter = counter + 1;
 		}
-		carouselcontainer.style.background = images[counter];
+		carouselcontainer.innerHTML = keys[counter];
 		console.log(counter);
 		checkDots();
 		return counter;
 	});
 	//resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
 	function checkDots() {
-		for (let i = 0; i < images.length; i++) {
+		for (let i = 0; i < keys.length; i++) {
 			if (counter == i) {
 				let dots = document.getElementsByClassName("circle");
 				for (let i = 0; i < dots.length; i++) {
