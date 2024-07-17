@@ -10,8 +10,11 @@ let item2 = document.getElementById("dropdown2");
 let item3 = document.getElementById("dropdown3");
 let item4 = document.getElementById("dropdown4");
 
+// word and definition buttons
+let word1 = document.getElementById("word1");
+let definition1 = document.getElementById("definition1");
+
 let bottomright = document.getElementById("bottomright");
-//
 let dropdowns = [item1, item2, item3, item4];
 
 //for (let i = 0; i < dropdowns.length; i++) {
@@ -58,11 +61,14 @@ item1.addEventListener("mouseleave", () => {
 	let switch1 = document.getElementById("visible2");
 	switch1.setAttribute("id", "switchcontainer1");
 });
+//event listener for selection of choice on unit 1
+word1.addEventListener("click", () => {
+	moveCarousel(unit1_vocab, 0);
+});
 
-//item1.addEventListener("click", () => {
-//moveCarousel(unit1_vocab);
-//});
-
+definition1.addEventListener("click", () => {
+	moveCarousel(unit1_vocab, 1);
+});
 item2.addEventListener("click", () => {
 	moveCarousel(unit2_vocab);
 });

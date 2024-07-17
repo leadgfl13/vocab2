@@ -1,8 +1,14 @@
-export function moveCarousel(unit) {
+export function moveCarousel(unit, choice) {
 	carouseldots.innerHTML = "";
 	let counter = 0;
 	var keys = Object.keys(unit);
 	var values = Object.values(unit);
+	if (choice == 1) {
+		let temp = keys;
+		keys = values;
+		values = temp;
+	}
+
 	carouselcontainer.innerHTML = keys[counter];
 	//creates dots for carousel and adds them to the page
 	for (let i = 0; i < keys.length; i++) {

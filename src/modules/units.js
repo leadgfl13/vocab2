@@ -1,8 +1,8 @@
 export let unit1_vocab = {
 	"unit 1 word": "Definition 1",
-	word2: "This is word2",
-	word3: "this is word 3",
-	word4: "this is word4",
+	"word 2": "DEFINITION 2",
+	"word 3": "DEFINITION 3",
+	"word 4": "DEFINITION 4",
 };
 
 export let unit2_vocab = {

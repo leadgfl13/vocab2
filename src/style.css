@@ -139,12 +139,13 @@ body {
 
 #dropdowncontainer:hover {
 	display: flex;
+	text-align: center;
 	width: 80%;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 	font-size: 16px;
 	flex-direction: column;
 	background-color: beige;
-	gap: 10x;
+	gap: 10px;
 }
 
 #dropdownitem:hover {
@@ -161,16 +162,21 @@ body {
 	width: 80%;
 	flex-direction: column;
 	background-color: beige;
-	gap: 10x;
+	gap: 20px;
 }
 
 #visible2 {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	justify-content: space-around;
 }
 #visible {
 	display: flex;
+	text-align: center;
+	width: 80%;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 16px;
 	flex-direction: column;
 	background-color: beige;
-	gap: 5px;
+	gap: 10px;
 }
