@@ -139,13 +139,34 @@ body {
 
 #dropdowncontainer:hover {
 	display: flex;
+	width: 80%;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 16px;
 	flex-direction: column;
 	background-color: beige;
-	gap: 5px;
+	gap: 10x;
 }
 
 #dropdownitem:hover {
 	display: flex;
+}
+
+#switchcontainer1 {
+	width: 50%;
+	display: none;
+}
+
+#switch1:hover {
+	display: flex;
+	width: 80%;
+	flex-direction: column;
+	background-color: beige;
+	gap: 10x;
+}
+
+#visible2 {
+	display: flex;
+	flex-direction: column;
 }
 #visible {
 	display: flex;

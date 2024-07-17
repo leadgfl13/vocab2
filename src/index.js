@@ -37,6 +37,7 @@ item2.addEventListener("click", () => console.log("load module 2 here"));
 item3.addEventListener("click", () => console.log("load module 3 here"));
 item4.addEventListener("click", () => console.log("load module 4 here"));
 
+//make dropdown contaner visible
 menu.addEventListener("mouseover", () => {
 	let test = document.getElementById("dropdowncontainer");
 	test.setAttribute("id", "visible");
@@ -47,9 +48,20 @@ menu.addEventListener("mouseleave", () => {
 	test.setAttribute("id", "dropdowncontainer");
 });
 
-item1.addEventListener("click", () => {
-	moveCarousel(unit1_vocab);
+//make switch for unit 1 visible
+item1.addEventListener("mouseover", () => {
+	let switch1 = document.getElementById("switchcontainer1");
+	switch1.setAttribute("id", "visible2");
 });
+//make switch for unit 1 visible
+item1.addEventListener("mouseleave", () => {
+	let switch1 = document.getElementById("visible2");
+	switch1.setAttribute("id", "switchcontainer1");
+});
+
+//item1.addEventListener("click", () => {
+//moveCarousel(unit1_vocab);
+//});
 
 item2.addEventListener("click", () => {
 	moveCarousel(unit2_vocab);
