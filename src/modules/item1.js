@@ -1,35 +1,11 @@
-let thing = ["I am thing1", "I am thing2"];
-let image1 = "url(../src/images/stardewvalley.jpg)";
-let image2 = "url(../src/images/dog.jpeg)";
-let image3 = "url(../src/images/greendragon.jpeg)";
-
-export function sayHello() {
-	alert(thing[1]);
-	carouselcontainer.style.backgroundImage = image2;
-}
-
-export function Menu2() {
-	carouselcontainer.style.backgroundImage = image1;
-}
-
-export function menu3() {
-	carouselcontainer.style.backgroundImage = image3;
-}
-
-export default (function moveCarousel() {
-	const unit1_vocab = {
-		Word1: "Definition 1",
-		word2: "This is word2",
-		word3: "this is word 3",
-	};
-
-	let images = [image1, image2, image3];
+export function moveCarousel(unit) {
+	carouseldots.innerHTML = "";
 	let counter = 0;
-	var keys = Object.keys(unit1_vocab);
-	var values = Object.values(unit1_vocab);
+	var keys = Object.keys(unit);
+	var values = Object.values(unit);
 	carouselcontainer.innerHTML = keys[counter];
 	//creates dots for carousel and adds them to the page
-	for (let i = 0; i < images.length; i++) {
+	for (let i = 0; i < keys.length; i++) {
 		let dot = document.createElement("div");
 		dot.setAttribute("class", "circle");
 		dot.setAttribute("id", "dots" + i);
@@ -43,7 +19,6 @@ export default (function moveCarousel() {
 
 			return counter;
 		});
-		let carouseldots = document.getElementById("carouseldots");
 		carouseldots.append(dot);
 		checkDots();
 	}
@@ -105,6 +80,6 @@ export default (function moveCarousel() {
 			}
 		}
 	}
-})();
+}
 
 //check whatever image index is currenty in the div, then make

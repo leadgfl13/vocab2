@@ -1,8 +1,7 @@
 import "./style.css";
 import { moveCarousel } from "./modules/item1";
-import { sayHello } from "./modules/item1";
-import { Menu2 } from "./modules/item1";
-import { menu3 } from "./modules/item1";
+import { unit1_vocab } from "./modules/units";
+import { unit2_vocab } from "./modules/units";
 
 //Glocal variables on main page
 let menu = document.getElementById("menubutton");
@@ -24,10 +23,6 @@ let dropdowns = [item1, item2, item3, item4];
 
 // individual event listeners for each dropdown menu item
 
-item1.addEventListener("click", () => {
-	sayHello();
-});
-
 item2.addEventListener("click", () => {
 	Menu2();
 });
@@ -38,7 +33,6 @@ item3.addEventListener("click", () => {
 
 // loading module for each dropdown item
 
-item1.addEventListener("click", () => console.log("load module 1 here"));
 item2.addEventListener("click", () => console.log("load module 2 here"));
 item3.addEventListener("click", () => console.log("load module 3 here"));
 item4.addEventListener("click", () => console.log("load module 4 here"));
@@ -51,4 +45,12 @@ menu.addEventListener("mouseover", () => {
 menu.addEventListener("mouseleave", () => {
 	let test = document.getElementById("visible");
 	test.setAttribute("id", "dropdowncontainer");
+});
+
+item1.addEventListener("click", () => {
+	moveCarousel(unit1_vocab);
+});
+
+item2.addEventListener("click", () => {
+	moveCarousel(unit2_vocab);
 });
