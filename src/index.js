@@ -2,6 +2,12 @@ import "./style.css";
 import { moveCarousel } from "./modules/item1";
 import { unit1_vocab } from "./modules/units";
 import { unit2_vocab } from "./modules/units";
+import { unit3_vocab } from "./modules/units";
+import { unit4_vocab } from "./modules/units";
+import { unit5_vocab } from "./modules/units";
+import { unit6_vocab } from "./modules/units";
+import { unit7_vocab } from "./modules/units";
+import { unit8_vocab } from "./modules/units";
 
 //Glocal variables on main page
 let menu = document.getElementById("menubutton");
@@ -13,6 +19,8 @@ let item4 = document.getElementById("dropdown4");
 // word and definition buttons
 let word1 = document.getElementById("word1");
 let definition1 = document.getElementById("definition1");
+let word2 = document.getElementById("word1");
+let definition2 = document.getElementById("definition1");
 
 let bottomright = document.getElementById("bottomright");
 let dropdowns = [item1, item2, item3, item4];
@@ -23,22 +31,6 @@ let dropdowns = [item1, item2, item3, item4];
 //		sayHello();
 //	});
 //}
-
-// individual event listeners for each dropdown menu item
-
-item2.addEventListener("click", () => {
-	Menu2();
-});
-
-item3.addEventListener("click", () => {
-	menu3();
-});
-
-// loading module for each dropdown item
-
-item2.addEventListener("click", () => console.log("load module 2 here"));
-item3.addEventListener("click", () => console.log("load module 3 here"));
-item4.addEventListener("click", () => console.log("load module 4 here"));
 
 //make dropdown contaner visible
 menu.addEventListener("mouseover", () => {
@@ -51,15 +43,26 @@ menu.addEventListener("mouseleave", () => {
 	test.setAttribute("id", "dropdowncontainer");
 });
 
-//make switch for unit 1 visible
+//make swich for each unit visible----------------------------
 item1.addEventListener("mouseover", () => {
 	let switch1 = document.getElementById("switchcontainer1");
-	switch1.setAttribute("id", "visible2");
+	switch1.setAttribute("id", "visibleswitch1");
 });
-//make switch for unit 1 visible
+
+item2.addEventListener("mouseover", () => {
+	let switch2 = document.getElementById("switchcontainer2");
+	switch2.setAttribute("id", "visibleswitch2");
+});
+
+//make switch for each unit disappear----------------
 item1.addEventListener("mouseleave", () => {
-	let switch1 = document.getElementById("visible2");
+	let switch1 = document.getElementById("visibleswitch1");
 	switch1.setAttribute("id", "switchcontainer1");
+});
+
+item2.addEventListener("mouseleave", () => {
+	let switch2 = document.getElementById("visibleswitch2");
+	switch2.setAttribute("id", "switchcontainer2");
 });
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {

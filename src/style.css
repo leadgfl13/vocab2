@@ -152,7 +152,8 @@ body {
 	display: flex;
 }
 
-#switchcontainer1 {
+#switchcontainer1,
+#switchcontainer2 {
 	width: 50%;
 	display: none;
 }
@@ -165,7 +166,8 @@ body {
 	gap: 20px;
 }
 
-#visible2 {
+#visibleswitch1,
+#visibleswitch2 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;

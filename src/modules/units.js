@@ -8,3 +8,27 @@ export let unit1_vocab = {
 export let unit2_vocab = {
 	unit2: "pee",
 };
+
+export let unit3_vocab = {
+	unit2: "pee",
+};
+
+export let unit4_vocab = {
+	unit2: "pee",
+};
+
+export let unit5_vocab = {
+	unit2: "pee",
+};
+
+export let unit6_vocab = {
+	unit2: "pee",
+};
+
+export let unit7_vocab = {
+	unit2: "pee",
+};
+
+export let unit8_vocab = {
+	unit2: "pee",
+};
