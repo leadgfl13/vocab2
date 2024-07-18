@@ -82,7 +82,7 @@ export function moveCarousel(unit, choice) {
 					dots[i].style.backgroundColor = "gray";
 				}
 				let thisdot = document.getElementById("dots" + i);
-				thisdot.style.backgroundColor = "red";
+				thisdot.style.backgroundColor = "black";
 			}
 		}
 	}

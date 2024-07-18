@@ -30,7 +30,7 @@
 	}
 }
 body {
-	background-color: skyblue;
+	background-color: rgb(156, 197, 176);
 }
 
 #pagelayout {
@@ -43,7 +43,18 @@ body {
 }
 
 #topright {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	grid-template-areas: 1/1/2/2;
+	font-size: 60px;
+	text-align: center;
+	background-color: tan;
+	border: 4px solid black;
+	color: green;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-weight: 700;
 }
 
 #topleft {
@@ -58,6 +69,7 @@ body {
 	grid-template-areas: 2/1/3/2;
 	display: flex;
 	flex-direction: Column;
+	width: 100%;
 }
 
 #leftright {
@@ -75,7 +87,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-grow: 0.2;
+	width: 20%;
 	text-align: center;
 }
 #right {
@@ -86,7 +98,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-grow: 0.2;
+	width: 20%;
 	text-align: center;
 }
 
@@ -98,87 +110,104 @@ body {
 	animation: bounceright 0.5s;
 }
 #carouselcontainer {
-	flex-grow: 0.8;
+	width: 70%;
 	display: flex;
-	margin: auto;
+	word-wrap: break-word;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-size: 24px;
 	border: 2px black solid;
-	background-color: darkblue;
+	background-color: rgb(8, 70, 8);
 	margin: 10px;
-	border-radius: 10px;
-	color: gray;
+	border-radius: 20px;
+	text-align: center;
+	color: tan;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	background-size: cover;
+	border: 2px black groove;
 }
 #carouseldots {
+	height: 40px;
+	width: auto;
 	gap: 10px;
-	padding-top: 10px;
-	height: 40%;
-	width: 100%;
 	display: flex;
+	padding: 8px;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	border: 2px green solid;
 	text-align: Center;
-}
-
-#dots {
-	background-color: blue;
+	border: groove black 10px;
 }
 
 .circle {
 	height: 40px;
-	width: 24px;
-	border-radius: 16px;
+	width: 40px;
+	border-radius: 50%;
 	background-color: gray;
 }
+
+#menubutton {
+	height: 30px;
+	border-radius: 15%;
+	color: green;
+	background-color: tan;
+	font-size: 18px;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	width: 100%;
+}
+
 #dropdowncontainer {
 	display: none;
 }
-
-#dropdowncontainer:hover {
+.switchcontainer {
 	display: flex;
-	text-align: center;
-	width: 80%;
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-	font-size: 16px;
-	flex-direction: column;
-	background-color: beige;
-	gap: 10px;
+	border: dotted 1px gray;
+	justify-content: space-around;
+	align-items: center;
 }
 
-#dropdownitem:hover {
-	display: flex;
+.dropdownitem {
+	border: 2px solid black;
+	padding: 5px;
 }
-
 #switchcontainer1,
-#switchcontainer2 {
+#switchcontainer2,
+#switchcontainer3,
+#switchcontainer4 {
 	width: 50%;
 	display: none;
 }
 
-#switch1:hover {
-	display: flex;
-	width: 80%;
-	flex-direction: column;
-	background-color: beige;
-	gap: 20px;
-}
-
 #visibleswitch1,
-#visibleswitch2 {
+#visibleswitch2,
+#visibleswitch3,
+#visibleswitch4 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 #visible {
+	width: 100%;
 	display: flex;
 	text-align: center;
-	width: 80%;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 	font-size: 16px;
 	flex-direction: column;
 	background-color: beige;
-	gap: 10px;
+	gap: 20px;
+	border: 2px solid black;
+}
+#dropdowncontainer:hover {
+	width: 100%;
+	display: flex;
+	text-align: center;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 16px;
+	flex-direction: column;
+	background-color: beige;
+	gap: 20px;
+	border: 2px solid black;
 }

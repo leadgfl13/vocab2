@@ -1,5 +1,6 @@
 export let unit1_vocab = {
-	"unit 1 word": "Definition 1",
+	"unit 1 word":
+		"Definition 1 this is a test to see how making the definition bigger affects the div size",
 	"word 2": "DEFINITION 2",
 	"word 3": "DEFINITION 3",
 	"word 4": "DEFINITION 4",
