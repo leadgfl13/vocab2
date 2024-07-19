@@ -253,12 +253,11 @@ body {
 	display: none;
 }
 .switchcontainer {
+	gap: 10px;
 	margin: 5px;
 	display: flex;
-	border: solid 1px brown;
 	justify-content: space-around;
 	align-items: center;
-	background-color: tan;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 }
@@ -266,9 +265,9 @@ body {
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 	font-size: 16px;
-	border-radius: 10%;
-	width: 100%;
+	width: 90%;
 	background-color: antiquewhite;
+	border-radius: 20px;
 	color: rgb(116, 154, 116);
 	font-weight: 800;
 }
