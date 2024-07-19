@@ -41,7 +41,7 @@ let definition7 = document.getElementById("definition7");
 let word8 = document.getElementById("word8");
 let definition8 = document.getElementById("definition8");
 
-//make dropdown contaner visible
+//make dropdown contanier visible
 
 menu.addEventListener("mouseover", () => {
 	let test = document.getElementById("dropdowncontainer");
@@ -127,76 +127,76 @@ item8.addEventListener("mouseleave", () => {
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
 	moveCarousel(unit1_vocab, 0);
-	topright.innerHTML = "Unit 1";
+	topright.innerHTML = "Scientific Method";
 });
 
 definition1.addEventListener("click", () => {
 	moveCarousel(unit1_vocab, 1);
-	topright.innerHTML = "Unit 1";
+	topright.innerHTML = "Scientific Method";
 });
 
 word2.addEventListener("click", () => {
 	moveCarousel(unit2_vocab, 0);
-	topright.innerHTML = "Unit 2";
+	topright.innerHTML = "Life and Cells";
 });
 
 definition2.addEventListener("click", () => {
 	moveCarousel(unit2_vocab, 1);
-	topright.innerHTML = "Unit 2";
+	topright.innerHTML = "Life and Cells";
 });
 
 word3.addEventListener("click", () => {
 	moveCarousel(unit3_vocab, 0);
-	topright.innerHTML = "Unit 3";
+	topright.innerHTML = "Nutrition";
 });
 
 definition3.addEventListener("click", () => {
 	moveCarousel(unit3_vocab, 1);
-	topright.innerHTML = "Unit 3";
+	topright.innerHTML = "Nutrition";
 });
 word4.addEventListener("click", () => {
 	moveCarousel(unit4_vocab, 0);
-	topright.innerHTML = "Unit 4";
+	topright.innerHTML = "Respiration/Photosynthesis";
 });
 
 definition4.addEventListener("click", () => {
 	moveCarousel(unit4_vocab, 1);
-	topright.innerHTML = "Unit 4";
+	topright.innerHTML = "Respiration/Photosynthesis";
 });
 word5.addEventListener("click", () => {
 	moveCarousel(unit5_vocab, 0);
-	topright.innerHTML = "Unit 5";
+	topright.innerHTML = "Homeostasis";
 });
 
 definition5.addEventListener("click", () => {
 	moveCarousel(unit5_vocab, 1);
-	topright.innerHTML = "Unit 5";
+	topright.innerHTML = "Homeostasis";
 });
 
 word6.addEventListener("click", () => {
 	moveCarousel(unit6_vocab, 0);
-	topright.innerHTML = "Unit 6";
+	topright.innerHTML = "Genetics";
 });
 
 definition6.addEventListener("click", () => {
 	moveCarousel(unit6_vocab, 1);
-	topright.innerHTML = "Unit 6";
+	topright.innerHTML = "Genetics";
 });
 word7.addEventListener("click", () => {
 	moveCarousel(unit7_vocab, 0);
-	topright.innerHTML = "Unit 7";
+	topright.innerHTML = "Evolution";
 });
 
 definition7.addEventListener("click", () => {
 	moveCarousel(unit7_vocab, 1);
-	topright.innerHTML = "Unit 7";
+	topright.innerHTML = "Evolution";
 });
 word8.addEventListener("click", () => {
 	moveCarousel(unit8_vocab, 0);
-	topright.innerHTML = "Unit 8";
+	topright.innerHTML = "Ecology";
 });
 
 definition8.addEventListener("click", () => {
 	moveCarousel(unit8_vocab, 1);
-	topright.innerHTML = "Unit 8";
+	topright.innerHTML = "Ecology";
 });
