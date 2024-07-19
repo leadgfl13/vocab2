@@ -3,10 +3,12 @@ export function moveCarousel(unit, choice) {
 	let counter = 0;
 	var keys = Object.keys(unit);
 	var values = Object.values(unit);
+
 	if (choice == 1) {
 		let temp = keys;
 		keys = values;
 		values = temp;
+		counter = makeRandom(keys.length);
 	}
 
 	carouselcontainer.innerHTML = keys[counter];
@@ -18,7 +20,6 @@ export function moveCarousel(unit, choice) {
 		//function to make dot click and showcase the corresponding image
 		dot.addEventListener("click", () => {
 			counter = i;
-			console.log(counter);
 			//need to update image
 			carouselcontainer.innerHTML = keys[counter];
 			checkDots();
@@ -28,13 +29,10 @@ export function moveCarousel(unit, choice) {
 		carouseldots.append(dot);
 		checkDots();
 	}
-	//sets defaults image to 0
-	//for the background image---------carouselcontainer.style.backgroundImage = images[counter];
 	//creates an array of keys and values from the unit 1 object
 
 	//on click will switch between key and value pair
 	carouselcontainer.addEventListener("click", () => {
-		console.log("teehee");
 		if (carouselcontainer.innerHTML == keys[counter]) {
 			carouselcontainer.innerHTML = values[counter];
 		} else if (carouselcontainer.innerHTML == values[counter]) {
@@ -86,6 +84,11 @@ export function moveCarousel(unit, choice) {
 			}
 		}
 	}
+}
+
+function makeRandom(max) {
+	let random = Math.floor(Math.random() * max);
+	return random;
 }
 
 //check whatever image index is currenty in the div, then make

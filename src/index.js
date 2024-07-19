@@ -45,7 +45,6 @@ let definition8 = document.getElementById("definition8");
 menu.addEventListener("mouseover", () => {
 	let test = document.getElementById("dropdowncontainer");
 	test.setAttribute("id", "visible");
-	let dropdowns = document.getElementsByClassName("dropdownitemvisible");
 });
 
 menu.addEventListener("mouseleave", () => {

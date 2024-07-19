@@ -16,7 +16,7 @@
 @keyframes fadeinfromtop {
 	0% {
 		opacity: 0;
-		transform: translateY(-20px);
+		transform: translateY(0px);
 	}
 	100% {
 		opacity: 1;
@@ -254,6 +254,7 @@ body {
 #visibleswitch6,
 #visibleswitch7,
 #visibleswitch8 {
+	animation: fadeinfromtop 0.5s forwards;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
