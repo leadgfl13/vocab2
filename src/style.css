@@ -180,6 +180,7 @@ body {
 }
 
 .front {
+	display: flex;
 	border-radius: 20px;
 	text-align: center;
 	justify-content: center;
@@ -188,13 +189,18 @@ body {
 	background-size: cover;
 	border: 2px black groove;
 	position: absolute;
+	color: black;
+	font-weight: 800;
 	height: 100%;
 	width: 100%;
 	backface-visibility: hidden;
-	background-color: yellow;
+	background-image: url("./images/paper.webp");
 }
 
 .back {
+	background-image: url("./images/paper.webp");
+
+	display: Flex;
 	border-radius: 20px;
 	text-align: center;
 	justify-content: center;
@@ -203,11 +209,11 @@ body {
 	background-size: cover;
 	border: 2px black groove;
 	position: absolute;
+	font-weight: 800;
 	height: 100%;
 	width: 100%;
 	backface-visibility: hidden;
-	color: darkgray;
-	background-color: white;
+	color: black;
 	transform: rotateY(180deg);
 }
 #carouseldots {

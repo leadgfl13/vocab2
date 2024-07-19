@@ -1,18 +1,17 @@
 export function moveCarousel(unit, choice) {
+	document.addEventListener("keydown", leftPress);
+
 	let front = document.getElementById("front");
 	let back = document.getElementById("back");
 	carouseldots.innerHTML = "";
 	let counter = 0;
-
 	var keys = Object.keys(unit);
 	var values = Object.values(unit);
-
 	if (choice == 1) {
 		let temp = keys;
 		keys = values;
 		values = temp;
 	}
-
 	front.innerHTML = keys[counter];
 	back.innerHTML = values[counter];
 	//creates dots for carousel and adds them to the page
@@ -33,6 +32,7 @@ export function moveCarousel(unit, choice) {
 		carouseldots.append(dot);
 		checkDots();
 	}
+
 	//creates an array of keys and values from the unit 1 object
 	//No longer need since front and back are separate divs
 	//on click will switch between key and value pair
@@ -69,7 +69,6 @@ export function moveCarousel(unit, choice) {
 		}
 		front.innerHTML = keys[counter];
 		back.innerHTML = values[counter];
-		console.log(counter);
 		checkDots();
 		return counter;
 	});
@@ -86,11 +85,39 @@ export function moveCarousel(unit, choice) {
 			}
 		}
 	}
-}
 
-function makeRandom(max) {
-	let random = Math.floor(Math.random() * max);
-	return random;
-}
+	function leftPress(event) {
+		if (event.keyCode === 37) {
+			if (counter == 0) {
+				counter = keys.length - 1;
+			} else {
+				counter = counter - 1;
+			}
+			front.innerHTML = keys[counter];
+			back.innerHTML = values[counter];
 
-//check whatever image index is currenty in the div, then make
+			console.log(counter);
+			checkDots();
+			return counter;
+		}
+		if (event.keyCode === 39) {
+			if (counter == keys.length - 1) {
+				counter = 0;
+			} else {
+				counter = counter + 1;
+			}
+			front.innerHTML = keys[counter];
+			back.innerHTML = values[counter];
+			console.log(counter);
+			checkDots();
+			return counter;
+		}
+		if (event.keyCode === 32) {
+			if (front.innerHTML == keys[counter]) {
+				front.innerHTML = values[counter];
+			} else if (front.innerHTML == values[counter]) {
+				front.innerHTML = keys[counter];
+			}
+		}
+	}
+}
