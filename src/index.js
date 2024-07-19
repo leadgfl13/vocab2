@@ -9,7 +9,7 @@ import { unit6_vocab } from "./modules/units";
 import { unit7_vocab } from "./modules/units";
 import { unit8_vocab } from "./modules/units";
 
-//Glocal variables on main page
+//Global variables on main page
 let topright = document.getElementById("topright");
 let menu = document.getElementById("menubutton");
 let item1 = document.getElementById("dropdown1");
@@ -20,6 +20,7 @@ let item5 = document.getElementById("dropdown5");
 let item6 = document.getElementById("dropdown6");
 let item7 = document.getElementById("dropdown7");
 let item8 = document.getElementById("dropdown8");
+let back = document.getElementById("back");
 let bottomright = document.getElementById("bottomright");
 
 // word and definition buttons

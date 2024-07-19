@@ -1,6 +1,9 @@
 export function moveCarousel(unit, choice) {
+	let front = document.getElementById("front");
+	let back = document.getElementById("back");
 	carouseldots.innerHTML = "";
 	let counter = 0;
+
 	var keys = Object.keys(unit);
 	var values = Object.values(unit);
 
@@ -8,10 +11,10 @@ export function moveCarousel(unit, choice) {
 		let temp = keys;
 		keys = values;
 		values = temp;
-		counter = makeRandom(keys.length);
 	}
 
-	carouselcontainer.innerHTML = keys[counter];
+	front.innerHTML = keys[counter];
+	back.innerHTML = values[counter];
 	//creates dots for carousel and adds them to the page
 	for (let i = 0; i < keys.length; i++) {
 		let dot = document.createElement("div");
@@ -21,7 +24,8 @@ export function moveCarousel(unit, choice) {
 		dot.addEventListener("click", () => {
 			counter = i;
 			//need to update image
-			carouselcontainer.innerHTML = keys[counter];
+			front.innerHTML = keys[counter];
+			back.innerHTML = values[counter];
 			checkDots();
 
 			return counter;
@@ -30,19 +34,15 @@ export function moveCarousel(unit, choice) {
 		checkDots();
 	}
 	//creates an array of keys and values from the unit 1 object
-
+	//No longer need since front and back are separate divs
 	//on click will switch between key and value pair
-	carouselcontainer.addEventListener("click", () => {
-		if (carouselcontainer.innerHTML == keys[counter]) {
-			carouselcontainer.innerHTML = values[counter];
-		} else if (carouselcontainer.innerHTML == values[counter]) {
-			carouselcontainer.innerHTML = keys[counter];
-		}
-	});
-
-	console.log(keys);
-	console.log(values);
-	console.log(keys[counter]);
+	//carouselcontainer.addEventListener("click", () => {
+	//	if (carouselcontainer.innerHTML == keys[counter]) {
+	//		carouselcontainer.innerHTML = values[counter];
+	//	} else if (carouselcontainer.innerHTML == values[counter]) {
+	//		carouselcontainer.innerHTML = keys[counter];
+	//	}
+	//});
 
 	//functions for left and right arrow, and changing counter
 	let leftarrow = document.getElementById("left");
@@ -53,7 +53,8 @@ export function moveCarousel(unit, choice) {
 		} else {
 			counter = counter - 1;
 		}
-		carouselcontainer.innerHTML = keys[counter];
+		front.innerHTML = keys[counter];
+		back.innerHTML = values[counter];
 
 		console.log(counter);
 		checkDots();
@@ -66,7 +67,8 @@ export function moveCarousel(unit, choice) {
 		} else {
 			counter = counter + 1;
 		}
-		carouselcontainer.innerHTML = keys[counter];
+		front.innerHTML = keys[counter];
+		back.innerHTML = values[counter];
 		console.log(counter);
 		checkDots();
 		return counter;

@@ -148,14 +148,13 @@ body {
 	animation: bounceright 0.5s;
 }
 #carouselcontainer {
+	position: relative;
 	width: 70%;
 	display: flex;
 	word-wrap: break-word;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 	font-size: 24px;
-	border: 2px black solid;
-	background-color: rgb(8, 70, 8);
 	margin: 10px;
 	border-radius: 20px;
 	text-align: center;
@@ -164,7 +163,52 @@ body {
 	align-items: center;
 	text-align: center;
 	background-size: cover;
+	perspective: 1200px;
+}
+
+#carouselcontainer:active > .card {
+	cursor: pointer;
+	transform: rotateY(180deg);
+}
+
+.card {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: transform 1000ms;
+}
+
+.front {
+	border-radius: 20px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-size: cover;
 	border: 2px black groove;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	background-color: yellow;
+}
+
+.back {
+	border-radius: 20px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-size: cover;
+	border: 2px black groove;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	color: darkgray;
+	background-color: white;
+	transform: rotateY(180deg);
 }
 #carouseldots {
 	height: 40px;
@@ -184,6 +228,9 @@ body {
 	width: 40px;
 	border-radius: 50%;
 	background-color: gray;
+}
+.circle:hover {
+	transform: scale(1.2);
 }
 
 #menubutton {
