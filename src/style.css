@@ -1,3 +1,16 @@
+@media (max-width: 768px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+/* Styles for devices with a max width of 480px (e.g., small phones) */
+@media (max-width: 480px) {
+	body {
+		font-size: 12px;
+	}
+}
+
 @keyframes bounceleft {
 	0%,
 	20%,
