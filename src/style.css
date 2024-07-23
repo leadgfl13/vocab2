@@ -238,7 +238,7 @@ body {
 	transform: rotateY(180deg);
 }
 #carouseldots {
-	height: 100px;
+	height: 80px;
 	width: auto;
 	gap: 10px;
 	display: flex;
@@ -355,4 +355,20 @@ body {
 	background-color: beige;
 	gap: 20px;
 	border: 2px solid black;
+}
+
+ul {
+	list-style: none;
+	gap: 14px;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-size: 26px;
+	font-weight: 700;
+	color: black;
+	margin-top: 30px;
 }
