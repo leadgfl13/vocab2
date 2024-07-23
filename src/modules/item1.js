@@ -74,7 +74,6 @@ export function moveCarousel(unit, choice) {
 		front.innerHTML = keys[counter];
 		back.innerHTML = values[counter];
 
-		console.log(counter);
 		checkDots();
 		return counter;
 	});
@@ -114,7 +113,6 @@ export function moveCarousel(unit, choice) {
 			front.innerHTML = keys[counter];
 			back.innerHTML = values[counter];
 
-			console.log(counter);
 			checkDots();
 			return counter;
 		}
@@ -126,7 +124,6 @@ export function moveCarousel(unit, choice) {
 			}
 			front.innerHTML = keys[counter];
 			back.innerHTML = values[counter];
-			console.log(counter);
 			checkDots();
 			return counter;
 		}
@@ -138,9 +135,7 @@ export function moveCarousel(unit, choice) {
 			}
 		}
 		if (event.keyCode === 38) {
-			alert("Works!");
 			let dots = document.getElementsByClassName("circle");
-			alert(dots.length);
 			counter = Math.floor(Math.random() * dots.length);
 			front.innerHTML = keys[counter];
 			back.innerHTML = values[counter];
