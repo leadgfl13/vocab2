@@ -192,11 +192,6 @@ body {
 	perspective: 1200px;
 }
 
-#carouselcontainer:active > .card {
-	cursor: pointer;
-	transform: rotateY(180deg);
-}
-
 .card {
 	height: 100%;
 	width: 100%;

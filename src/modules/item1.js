@@ -9,6 +9,18 @@ export function moveCarousel(unit, choice) {
 			}
 		}
 	});
+	let carousel = document.getElementById("carouselcontainer");
+
+	carousel.addEventListener("click", () => {
+		let card = document.getElementsByClassName("card");
+		for (let i = 0; i < card.length; i++) {
+			if (card[i].style.transform == "rotateY(180deg)") {
+				card[i].style.transform = "rotateY(0deg)";
+			} else if (card[i].style.transform !== "rotateY(180deg)") {
+				card[i].style.transform = "rotateY(180deg)";
+			}
+		}
+	});
 	document.addEventListener("keyup", function (event) {
 		if (event.key === "f") {
 			let card = document.getElementsByClassName("card");
