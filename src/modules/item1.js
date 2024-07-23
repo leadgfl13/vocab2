@@ -1,5 +1,23 @@
 export function moveCarousel(unit, choice) {
 	document.addEventListener("keydown", leftPress);
+	document.addEventListener("keydown", function (event) {
+		if (event.key === "f") {
+			let card = document.getElementsByClassName("card");
+			for (let i = 0; i < card.length; i++) {
+				card[i].style.cursor = "pointer";
+				card[i].style.transform = "rotateY(180deg)";
+			}
+		}
+	});
+	document.addEventListener("keyup", function (event) {
+		if (event.key === "f") {
+			let card = document.getElementsByClassName("card");
+			for (let i = 0; i < card.length; i++) {
+				card[i].style.cursor = "pointer";
+				card[i].style.transform = "rotateY(0deg)";
+			}
+		}
+	});
 
 	let front = document.getElementById("front");
 	let back = document.getElementById("back");
@@ -27,7 +45,7 @@ export function moveCarousel(unit, choice) {
 			back.innerHTML = values[counter];
 			checkDots();
 
-			return counter;
+			return counter, unit;
 		});
 		carouseldots.append(dot);
 		checkDots();
@@ -118,6 +136,15 @@ export function moveCarousel(unit, choice) {
 			} else if (front.innerHTML == values[counter]) {
 				front.innerHTML = keys[counter];
 			}
+		}
+		if (event.keyCode === 38) {
+			alert("Works!");
+			let dots = document.getElementsByClassName("circle");
+			alert(dots.length);
+			counter = Math.floor(Math.random() * dots.length);
+			front.innerHTML = keys[counter];
+			back.innerHTML = values[counter];
+			checkDots();
 		}
 	}
 }

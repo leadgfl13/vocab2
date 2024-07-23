@@ -1,16 +1,23 @@
 export let unit1_vocab = {
-	"unit 1 word":
-		"Definition 1 this is a test to see how making the definition bigger affects the div size",
-	"word 2": "DEFINITION 2",
-	"word 3": "DEFINITION 3",
-	"word 4": "DEFINITION 4",
-	"word 5": "Definition 5",
-	"Word 6": "definition 6",
-	"word 7": "definition 7",
-	"word 8": "defintion 8",
-	"word 9": "definition 9",
-	"word 10": "definition 10",
-	"word 11": "definition 11",
+	Observation:
+		"the act of noticing and describing processes in a careful, orderly way",
+	inference: "a logical interpretation based on what scientists already know",
+	hypothesis:
+		"a scientific explanation for a set of observations that can be tested in ways that support, or reject it",
+	"Controlled Experiement":
+		"an experiment in which only one variable is changed.  All other variables should be controlled for, or kept constant ",
+	"Independent Variable":
+		" Also known as the experimental, or manipulated variable.  The variable that is deliberatey changed",
+	"Dependent Variable":
+		"Also known as the measured, or responding variable.  The variable that is observed and changes in response to the independent variable",
+	"Control Group":
+		"The group that does not receive any change.  Is used as a baseline of comparison",
+	"Experimental Group":
+		"The group(s) in which the Independent variable is changed for the purpose of observing differences.  There can be multiple experimental groups",
+	"Peer Review":
+		" A review process in which other experts in the field review work to determine any errors or flaws in an experiment",
+	Theory: "A well-tested explanation backed by evidence",
+	Bias: "a particular preference or point of view that is personal.  Sometimes these can be ingrained based on life experiences",
 	"word 12": "Definition 12",
 	"word 13": "Defintion 13",
 	"word 14": "definition 14",
