@@ -132,7 +132,7 @@ body {
 	font-size: 2rem;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
-	background-color: blue;
+	background-color: rgb(4, 65, 4);
 	color: tan;
 	font-weight: 800;
 }
@@ -203,7 +203,10 @@ body {
 	background-size: cover;
 	perspective: 1200px;
 }
-
+#carouselcontainer:active > .card {
+	cursor: "pointer";
+	transform: "rotateY(0deg)";
+}
 .card {
 	height: 100%;
 	width: 100%;
@@ -286,6 +289,7 @@ body {
 #dropdowncontainer {
 	display: none;
 }
+
 .switchcontainer {
 	gap: 10px;
 	margin: 5px;
@@ -331,14 +335,10 @@ body {
 	display: none;
 }
 
-#visibleswitch1,
-#visibleswitch2,
-#visibleswitch3,
-#visibleswitch4,
-#visibleswitch5,
-#visibleswitch6,
-#visibleswitch7,
-#visibleswitch8 {
+#visibleswitch1 #visibleswitch2,
+#visibleswitch3 #visibleswitch4,
+#visibleswitch5 #visibleswitch6,
+#visibleswitch7 #visibleswitch8 {
 	animation: fadeinfromtop 0.5s forwards;
 	display: flex;
 	flex-direction: row;

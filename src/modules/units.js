@@ -67,7 +67,7 @@ export let unit2_vocab = {
 };
 
 export let unit3_vocab = {
-	"unit 1 word":
+	"unit 3 word":
 		"Definition 1 this is a test to see how making the definition bigger affects the div size",
 	"word 2": "DEFINITION 2",
 	"word 3": "DEFINITION 3",
@@ -91,7 +91,7 @@ export let unit3_vocab = {
 };
 
 export let unit4_vocab = {
-	"unit 1 word":
+	"unit 4 word":
 		"Definition 1 this is a test to see how making the definition bigger affects the div size",
 	"word 2": "DEFINITION 2",
 	"word 3": "DEFINITION 3",
@@ -115,7 +115,7 @@ export let unit4_vocab = {
 };
 
 export let unit5_vocab = {
-	"unit 1 word":
+	"unit 5 word":
 		"Definition 1 this is a test to see how making the definition bigger affects the div size",
 	"word 2": "DEFINITION 2",
 	"word 3": "DEFINITION 3",
@@ -139,7 +139,7 @@ export let unit5_vocab = {
 };
 
 export let unit6_vocab = {
-	"unit 1 word":
+	"unit 6 word":
 		"Definition 1 this is a test to see how making the definition bigger affects the div size",
 	"word 2": "DEFINITION 2",
 	"word 3": "DEFINITION 3",
@@ -163,7 +163,7 @@ export let unit6_vocab = {
 };
 
 export let unit7_vocab = {
-	"unit 1 word":
+	"unit 7 word":
 		"Definition 1 this is a test to see how making the definition bigger affects the div size",
 	"word 2": "DEFINITION 2",
 	"word 3": "DEFINITION 3",
@@ -187,7 +187,7 @@ export let unit7_vocab = {
 };
 
 export let unit8_vocab = {
-	"unit 1 word":
+	"unit 8 word":
 		"Definition 1 this is a test to see how making the definition bigger affects the div size",
 	"word 2": "DEFINITION 2",
 	"word 3": "DEFINITION 3",

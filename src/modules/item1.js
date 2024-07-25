@@ -1,5 +1,16 @@
 export function moveCarousel(unit, choice) {
-	document.addEventListener("keydown", leftPress);
+	let front = document.getElementById("front");
+	let back = document.getElementById("back");
+	carouseldots.innerHTML = "";
+	let counter = 0;
+	var keys = Object.keys(unit);
+	var values = Object.values(unit);
+	if (choice == 1) {
+		let temp = keys;
+		keys = values;
+		values = temp;
+	}
+
 	document.addEventListener("keydown", function (event) {
 		if (event.key === "f") {
 			let card = document.getElementsByClassName("card");
@@ -14,10 +25,10 @@ export function moveCarousel(unit, choice) {
 	carousel.addEventListener("click", () => {
 		let card = document.getElementsByClassName("card");
 		for (let i = 0; i < card.length; i++) {
-			if (card[i].style.transform == "rotateY(180deg)") {
-				card[i].style.transform = "rotateY(0deg)";
-			} else if (card[i].style.transform !== "rotateY(180deg)") {
+			if (card[i].style.transform !== "rotateY(180deg)") {
 				card[i].style.transform = "rotateY(180deg)";
+			} else if (card[i].style.transform == "rotateY(180deg)") {
+				card[i].style.transform = "rotateY(0deg)";
 			}
 		}
 	});
@@ -31,17 +42,6 @@ export function moveCarousel(unit, choice) {
 		}
 	});
 
-	let front = document.getElementById("front");
-	let back = document.getElementById("back");
-	carouseldots.innerHTML = "";
-	let counter = 0;
-	var keys = Object.keys(unit);
-	var values = Object.values(unit);
-	if (choice == 1) {
-		let temp = keys;
-		keys = values;
-		values = temp;
-	}
 	front.innerHTML = keys[counter];
 	back.innerHTML = values[counter];
 	//creates dots for carousel and adds them to the page
@@ -62,17 +62,6 @@ export function moveCarousel(unit, choice) {
 		carouseldots.append(dot);
 		checkDots();
 	}
-
-	//creates an array of keys and values from the unit 1 object
-	//No longer need since front and back are separate divs
-	//on click will switch between key and value pair
-	//carouselcontainer.addEventListener("click", () => {
-	//	if (carouselcontainer.innerHTML == keys[counter]) {
-	//		carouselcontainer.innerHTML = values[counter];
-	//	} else if (carouselcontainer.innerHTML == values[counter]) {
-	//		carouselcontainer.innerHTML = keys[counter];
-	//	}
-	//});
 
 	//functions for left and right arrow, and changing counter
 	let leftarrow = document.getElementById("left");
@@ -139,10 +128,11 @@ export function moveCarousel(unit, choice) {
 			checkDots();
 			return counter;
 		}
+		//spacbar
 		if (event.keyCode === 32) {
 			if (front.innerHTML == keys[counter]) {
-				front.innerHTML = values[counter];
-			} else if (front.innerHTML == values[counter]) {
+				front.innerHTML = back.innerHTML;
+			} else if (back.innerHTML == values[counter]) {
 				front.innerHTML = keys[counter];
 			}
 		}
@@ -154,4 +144,5 @@ export function moveCarousel(unit, choice) {
 			checkDots();
 		}
 	}
+	document.addEventListener("keydown", leftPress);
 }
