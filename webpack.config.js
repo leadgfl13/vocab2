@@ -35,7 +35,6 @@ module.exports = {
 			inject: "body",
 			filename: "index.html",
 			minify: false,
-			scriptloading: "defer",
 		}),
 	],
 };

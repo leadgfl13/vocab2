@@ -205,7 +205,12 @@ body {
 }
 #carouselcontainer:active > .card {
 	cursor: "pointer";
-	transform: "rotateY(0deg)";
+	transform: "rotateY(180deg)";
+}
+
+.card .cardflipped {
+	cursor: "pointer";
+	transform: "rotateY(180deg)";
 }
 .card {
 	height: 100%;

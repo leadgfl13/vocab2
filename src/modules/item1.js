@@ -1,6 +1,8 @@
 export function moveCarousel(unit, choice) {
+	let carousel = document.getElementById("carouselcontainer");
 	let front = document.getElementById("front");
 	let back = document.getElementById("back");
+
 	carouseldots.innerHTML = "";
 	let counter = 0;
 	var keys = Object.keys(unit);
@@ -10,7 +12,7 @@ export function moveCarousel(unit, choice) {
 		keys = values;
 		values = temp;
 	}
-
+	//makes card flip on f press down
 	document.addEventListener("keydown", function (event) {
 		if (event.key === "f") {
 			let card = document.getElementsByClassName("card");
@@ -20,18 +22,15 @@ export function moveCarousel(unit, choice) {
 			}
 		}
 	});
-	let carousel = document.getElementById("carouselcontainer");
 
+	// causes card to flip on a click
 	carousel.addEventListener("click", () => {
 		let card = document.getElementsByClassName("card");
 		for (let i = 0; i < card.length; i++) {
-			if (card[i].style.transform !== "rotateY(180deg)") {
-				card[i].style.transform = "rotateY(180deg)";
-			} else if (card[i].style.transform == "rotateY(180deg)") {
-				card[i].style.transform = "rotateY(0deg)";
-			}
+			card[i].classList.toggle("flipped");
 		}
 	});
+
 	document.addEventListener("keyup", function (event) {
 		if (event.key === "f") {
 			let card = document.getElementsByClassName("card");
@@ -49,7 +48,7 @@ export function moveCarousel(unit, choice) {
 		let dot = document.createElement("div");
 		dot.setAttribute("class", "circle");
 		dot.setAttribute("id", "dots" + i);
-		//function to make dot click and showcase the corresponding image
+		//function to make dot click and showcase the corresponding card
 		dot.addEventListener("click", () => {
 			counter = i;
 			//need to update image
