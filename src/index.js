@@ -1,4 +1,5 @@
 import "./style.css";
+import { makeDots } from "./modules/item1";
 import { moveCarousel } from "./modules/item1";
 import { unit1_vocab } from "./modules/units";
 import { unit2_vocab } from "./modules/units";
@@ -10,6 +11,7 @@ import { unit7_vocab } from "./modules/units";
 import { unit8_vocab } from "./modules/units";
 
 //Global variables on main page
+let counter = 0;
 let carousel = document.getElementById("carouselcontainer");
 let test = document.getElementById("dropdowncontainer");
 let switch1 = document.getElementById("switchcontainer1");
@@ -21,6 +23,8 @@ let switch6 = document.getElementById("switchcontainer6");
 let switch7 = document.getElementById("switchcontainer7");
 let switch8 = document.getElementById("switchcontainer8");
 
+//event listeners
+
 // causes card to flip on a click
 carousel.addEventListener("click", () => {
 	let card = document.getElementsByClassName("card");
@@ -29,7 +33,7 @@ carousel.addEventListener("click", () => {
 	}
 });
 
-//lets card flip on f press
+//lets card flip on f press down
 document.addEventListener("keydown", function (event) {
 	if (event.key === "f") {
 		let card = document.getElementsByClassName("card");
@@ -39,6 +43,8 @@ document.addEventListener("keydown", function (event) {
 		}
 	}
 });
+//lets card flip on f release up
+
 document.addEventListener("keyup", function (event) {
 	if (event.key === "f") {
 		let card = document.getElementsByClassName("card");
@@ -49,6 +55,7 @@ document.addEventListener("keyup", function (event) {
 	}
 });
 
+//menu items
 let topright = document.getElementById("topright");
 let menu = document.getElementById("menubutton");
 let item1 = document.getElementById("dropdown1");
@@ -80,8 +87,7 @@ let definition7 = document.getElementById("definition7");
 let word8 = document.getElementById("word8");
 let definition8 = document.getElementById("definition8");
 
-//make dropdown contanier visible
-
+//event listeners to make dropdown container visible on active hovers
 menu.addEventListener("mouseover", () => {
 	test.setAttribute("id", "visible");
 });

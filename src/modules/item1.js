@@ -2,18 +2,16 @@ export function moveCarousel(unit, choice) {
 	let carousel = document.getElementById("carouselcontainer");
 	let front = document.getElementById("front");
 	let back = document.getElementById("back");
-
-	carouseldots.innerHTML = "";
 	let counter = 0;
 	var keys = Object.keys(unit);
 	var values = Object.values(unit);
+	carouseldots.innerHTML = "";
+
 	if (choice == 1) {
 		let temp = keys;
 		keys = values;
 		values = temp;
 	}
-	//makes card flip on f press down
-
 	front.innerHTML = keys[counter];
 	back.innerHTML = values[counter];
 	//creates dots for carousel and adds them to the page
@@ -24,12 +22,9 @@ export function moveCarousel(unit, choice) {
 		//function to make dot click and showcase the corresponding card
 		dot.addEventListener("click", () => {
 			counter = i;
-			//need to update image
 			front.innerHTML = keys[counter];
 			back.innerHTML = values[counter];
 			checkDots();
-
-			return counter, unit;
 		});
 		carouseldots.append(dot);
 		checkDots();
@@ -62,6 +57,8 @@ export function moveCarousel(unit, choice) {
 		checkDots();
 		return counter;
 	});
+	//end of carousel
+
 	//resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
 	function checkDots() {
 		for (let i = 0; i < keys.length; i++) {
@@ -100,9 +97,9 @@ export function moveCarousel(unit, choice) {
 			checkDots();
 			return counter;
 		}
+
 		//spacbar
 		if (event.keyCode === 32) {
-			alert("spaced");
 			if (front.innerHTML == keys[counter]) {
 				front.innerHTML = back.innerHTML;
 			} else if (back.innerHTML == values[counter]) {
@@ -118,4 +115,5 @@ export function moveCarousel(unit, choice) {
 		}
 	}
 	document.addEventListener("keydown", leftPress);
+	return counter, unit;
 }
