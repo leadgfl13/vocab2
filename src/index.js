@@ -10,6 +10,7 @@ import { unit7_vocab } from "./modules/units";
 import { unit8_vocab } from "./modules/units";
 
 //Global variables on main page
+let carousel = document.getElementById("carouselcontainer");
 let test = document.getElementById("dropdowncontainer");
 let switch1 = document.getElementById("switchcontainer1");
 let switch2 = document.getElementById("switchcontainer2");
@@ -19,6 +20,14 @@ let switch5 = document.getElementById("switchcontainer5");
 let switch6 = document.getElementById("switchcontainer6");
 let switch7 = document.getElementById("switchcontainer7");
 let switch8 = document.getElementById("switchcontainer8");
+
+// causes card to flip on a click
+carousel.addEventListener("click", () => {
+	let card = document.getElementsByClassName("card");
+	for (let i = 0; i < card.length; i++) {
+		card[i].classList.toggle("flipped");
+	}
+});
 
 let topright = document.getElementById("topright");
 let menu = document.getElementById("menubutton");

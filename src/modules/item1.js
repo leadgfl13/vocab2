@@ -23,14 +23,6 @@ export function moveCarousel(unit, choice) {
 		}
 	});
 
-	// causes card to flip on a click
-	carousel.addEventListener("click", () => {
-		let card = document.getElementsByClassName("card");
-		for (let i = 0; i < card.length; i++) {
-			card[i].classList.toggle("flipped");
-		}
-	});
-
 	document.addEventListener("keyup", function (event) {
 		if (event.key === "f") {
 			let card = document.getElementsByClassName("card");

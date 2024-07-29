@@ -204,20 +204,7 @@ body {
 	background-size: cover;
 	perspective: 1200px;
 }
-#carouselcontainer:active > .card {
-	cursor: "pointer";
-	transform: "rotateY(180deg)";
-}
 
-.card .cardflipped {
-	cursor: "pointer";
-	transform: "rotateY(180deg)";
-}
-
-.cardflipped {
-	cursor: "pointer";
-	transform: "rotateY(180deg)";
-}
 .card {
 	height: 100%;
 	width: 100%;
@@ -225,7 +212,9 @@ body {
 	transform-style: preserve-3d;
 	transition: transform 1000ms;
 }
-
+.flipped {
+	transform: rotateY(180deg);
+}
 .front {
 	display: flex;
 	border-radius: 20px;
