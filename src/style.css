@@ -129,6 +129,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	font-size: 2rem;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
@@ -209,6 +210,11 @@ body {
 }
 
 .card .cardflipped {
+	cursor: "pointer";
+	transform: "rotateY(180deg)";
+}
+
+.cardflipped {
 	cursor: "pointer";
 	transform: "rotateY(180deg)";
 }

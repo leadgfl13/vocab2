@@ -10,6 +10,16 @@ import { unit7_vocab } from "./modules/units";
 import { unit8_vocab } from "./modules/units";
 
 //Global variables on main page
+let test = document.getElementById("dropdowncontainer");
+let switch1 = document.getElementById("switchcontainer1");
+let switch2 = document.getElementById("switchcontainer2");
+let switch3 = document.getElementById("switchcontainer3");
+let switch4 = document.getElementById("switchcontainer4");
+let switch5 = document.getElementById("switchcontainer5");
+let switch6 = document.getElementById("switchcontainer6");
+let switch7 = document.getElementById("switchcontainer7");
+let switch8 = document.getElementById("switchcontainer8");
+
 let topright = document.getElementById("topright");
 let menu = document.getElementById("menubutton");
 let item1 = document.getElementById("dropdown1");
@@ -44,49 +54,39 @@ let definition8 = document.getElementById("definition8");
 //make dropdown contanier visible
 
 menu.addEventListener("mouseover", () => {
-	let test = document.getElementById("dropdowncontainer");
 	test.setAttribute("id", "visible");
 });
 
 menu.addEventListener("mouseleave", () => {
-	let test = document.getElementById("visible");
 	test.setAttribute("id", "dropdowncontainer");
 });
 
 //make swich for each unit visible----------------------------
 item1.addEventListener("mouseover", () => {
-	let switch1 = document.getElementById("switchcontainer1");
 	switch1.id = "visibleswitch1";
 });
 
 item2.addEventListener("mouseover", () => {
-	let switch2 = document.getElementById("switchcontainer2");
 	switch2.id = "visibleswitch2";
 });
 
 item3.addEventListener("mouseover", () => {
-	let switch3 = document.getElementById("switchcontainer3");
 	switch3.id = "visibleswitch3";
 });
 
 item4.addEventListener("mouseover", () => {
-	let switch4 = document.getElementById("switchcontainer4");
 	switch4.id = "visibleswitch4";
 });
 item5.addEventListener("mouseover", () => {
-	let switch5 = document.getElementById("switchcontainer5");
 	switch5.id = "visibleswitch5";
 });
 item6.addEventListener("mouseover", () => {
-	let switch6 = document.getElementById("switchcontainer6");
 	switch6.id = "visibleswitch6";
 });
 item7.addEventListener("mouseover", () => {
-	let switch7 = document.getElementById("switchcontainer7");
 	switch7.id = "visibleswitch7";
 });
 item8.addEventListener("mouseover", () => {
-	let switch8 = document.getElementById("switchcontainer8");
 	switch8.id = "visibleswitch8";
 });
 //make switch for each unit disappear----------------
