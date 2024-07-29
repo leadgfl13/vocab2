@@ -13,25 +13,6 @@ export function moveCarousel(unit, choice) {
 		values = temp;
 	}
 	//makes card flip on f press down
-	document.addEventListener("keydown", function (event) {
-		if (event.key === "f") {
-			let card = document.getElementsByClassName("card");
-			for (let i = 0; i < card.length; i++) {
-				card[i].style.cursor = "pointer";
-				card[i].style.transform = "rotateY(180deg)";
-			}
-		}
-	});
-
-	document.addEventListener("keyup", function (event) {
-		if (event.key === "f") {
-			let card = document.getElementsByClassName("card");
-			for (let i = 0; i < card.length; i++) {
-				card[i].style.cursor = "pointer";
-				card[i].style.transform = "rotateY(0deg)";
-			}
-		}
-	});
 
 	front.innerHTML = keys[counter];
 	back.innerHTML = values[counter];
@@ -121,10 +102,11 @@ export function moveCarousel(unit, choice) {
 		}
 		//spacbar
 		if (event.keyCode === 32) {
+			alert("spaced");
 			if (front.innerHTML == keys[counter]) {
 				front.innerHTML = back.innerHTML;
 			} else if (back.innerHTML == values[counter]) {
-				front.innerHTML = keys[counter];
+				front.innerHTML = back.innerHTML;
 			}
 		}
 		if (event.keyCode === 38) {

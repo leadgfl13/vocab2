@@ -29,6 +29,26 @@ carousel.addEventListener("click", () => {
 	}
 });
 
+//lets card flip on f press
+document.addEventListener("keydown", function (event) {
+	if (event.key === "f") {
+		let card = document.getElementsByClassName("card");
+		for (let i = 0; i < card.length; i++) {
+			card[i].style.cursor = "pointer";
+			card[i].style.transform = "rotateY(180deg)";
+		}
+	}
+});
+document.addEventListener("keyup", function (event) {
+	if (event.key === "f") {
+		let card = document.getElementsByClassName("card");
+		for (let i = 0; i < card.length; i++) {
+			card[i].style.cursor = "pointer";
+			card[i].style.transform = "rotateY(0deg)";
+		}
+	}
+});
+
 let topright = document.getElementById("topright");
 let menu = document.getElementById("menubutton");
 let item1 = document.getElementById("dropdown1");
