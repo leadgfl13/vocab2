@@ -1,5 +1,5 @@
 import "./style.css";
-import { moveCarousel } from "./modules/item1";
+import { moveCarousel } from "./modules/carousel";
 import { unit1_vocab } from "./modules/units";
 import { unit2_vocab } from "./modules/units";
 import { unit3_vocab } from "./modules/units";
@@ -9,7 +9,21 @@ import { unit6_vocab } from "./modules/units";
 import { unit7_vocab } from "./modules/units";
 import { unit8_vocab } from "./modules/units";
 
+//declare unit variables
+const unit1 = unit1_vocab;
+const unit2 = unit2_vocab;
+const unit3 = unit3_vocab;
+const unit4 = unit4_vocab;
+const unit5 = unit5_vocab;
+const unit6 = unit6_vocab;
+const unit7 = unit7_vocab;
+const unit8 = unit8_vocab;
+
 //Global variables on main page
+const leftbutton = document.getElementById("leftarrow");
+const rightbutton = document.getElementById("rightarrow");
+
+let counter = 0;
 let carousel = document.getElementById("carouselcontainer");
 let test = document.getElementById("dropdowncontainer");
 let switch1 = document.getElementById("switchcontainer1");
@@ -20,7 +34,9 @@ let switch5 = document.getElementById("switchcontainer5");
 let switch6 = document.getElementById("switchcontainer6");
 let switch7 = document.getElementById("switchcontainer7");
 let switch8 = document.getElementById("switchcontainer8");
+//make a function to retrieve the current unit
 
+function getUnit() {}
 // causes card to flip on a click
 carousel.addEventListener("click", () => {
 	let card = document.getElementsByClassName("card");
@@ -60,7 +76,6 @@ let item6 = document.getElementById("dropdown6");
 let item7 = document.getElementById("dropdown7");
 let item8 = document.getElementById("dropdown8");
 let back = document.getElementById("back");
-let bottomright = document.getElementById("bottomright");
 
 // word and definition buttons
 let word1 = document.getElementById("word1");
@@ -155,7 +170,8 @@ item8.addEventListener("mouseleave", () => {
 
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
-	moveCarousel(unit1_vocab, 0);
+	test = moveCarousel(unit1_vocab, 0);
+	console.log(test);
 	topright.innerHTML = "Scientific Method";
 });
 
@@ -229,3 +245,59 @@ definition8.addEventListener("click", () => {
 	moveCarousel(unit8_vocab, 1);
 	topright.innerHTML = "Ecology";
 });
+
+//functions for left and right arrow, and changing counter
+
+leftbutton.addEventListener("click", () => {
+	// needs to take the output of the carousel container to then use
+	//if (counter == 0) {
+	//	counter = keys.length - 1;
+	//} else {
+	//	counter = counter - 1;
+	//}
+	//front.innerHTML = keys[counter];
+	//back.innerHTML = values[counter];
+	//checkDots();
+	//return counter;
+});
+
+rightarrow.addEventListener("click", () => {
+	//needs to take the output of the carousel container to then use
+	if (counter == keys.length - 1) {
+		counter = 0;
+	} else {
+		counter = counter + 1;
+	}
+	front.innerHTML = keys[counter];
+	back.innerHTML = values[counter];
+	checkDots();
+	return counter;
+});
+//resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
+function checkDots() {
+	for (let i = 0; i < keys.length; i++) {
+		if (counter == i) {
+			let dots = document.getElementsByClassName("circle");
+			for (let i = 0; i < dots.length; i++) {
+				dots[i].style.backgroundColor = "gray";
+			}
+			var thisdot = document.getElementById("dots" + i);
+			thisdot.style.backgroundColor = "black";
+		}
+	}
+}
+
+function leftPress(event) {
+	if (event.keyCode === 37) {
+		if (counter == 0) {
+			counter = keys.length - 1;
+		} else {
+			counter = counter - 1;
+		}
+		front.innerHTML = keys[counter];
+		back.innerHTML = values[counter];
+
+		checkDots();
+		return counter;
+	}
+}
