@@ -12,7 +12,7 @@ import { unit7_vocab } from "./modules/units";
 import { unit8_vocab } from "./modules/units";
 
 const unit1 = unit1_vocab;
-let testes = moveCarousel(unit1);
+const unit2 = unit2_vocab;
 
 //Global variables on main page
 let counter = 0;
@@ -165,7 +165,7 @@ item8.addEventListener("mouseleave", () => {
 
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
-	moveCarousel(unit1_vocab, 0);
+	let testes = moveCarousel(unit1_vocab, 0);
 	//leftArrow(testes);
 	topright.innerHTML = "Scientific Method";
 });
