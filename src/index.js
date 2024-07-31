@@ -1,4 +1,5 @@
 import "./style.css";
+import { leftArrow } from "./modules/carousel";
 import { moveCarousel } from "./modules/carousel";
 import { unit1_vocab } from "./modules/units";
 import { unit2_vocab } from "./modules/units";
@@ -34,9 +35,7 @@ let switch5 = document.getElementById("switchcontainer5");
 let switch6 = document.getElementById("switchcontainer6");
 let switch7 = document.getElementById("switchcontainer7");
 let switch8 = document.getElementById("switchcontainer8");
-//make a function to retrieve the current unit
 
-function getUnit() {}
 // causes card to flip on a click
 carousel.addEventListener("click", () => {
 	let card = document.getElementsByClassName("card");
@@ -55,6 +54,7 @@ document.addEventListener("keydown", function (event) {
 		}
 	}
 });
+//lets card flip back on f release
 document.addEventListener("keyup", function (event) {
 	if (event.key === "f") {
 		let card = document.getElementsByClassName("card");
@@ -96,11 +96,9 @@ let word8 = document.getElementById("word8");
 let definition8 = document.getElementById("definition8");
 
 //make dropdown contanier visible
-
 menu.addEventListener("mouseover", () => {
 	test.setAttribute("id", "visible");
 });
-
 menu.addEventListener("mouseleave", () => {
 	test.setAttribute("id", "dropdowncontainer");
 });
@@ -109,15 +107,12 @@ menu.addEventListener("mouseleave", () => {
 item1.addEventListener("mouseover", () => {
 	switch1.id = "visibleswitch1";
 });
-
 item2.addEventListener("mouseover", () => {
 	switch2.id = "visibleswitch2";
 });
-
 item3.addEventListener("mouseover", () => {
 	switch3.id = "visibleswitch3";
 });
-
 item4.addEventListener("mouseover", () => {
 	switch4.id = "visibleswitch4";
 });
@@ -133,12 +128,12 @@ item7.addEventListener("mouseover", () => {
 item8.addEventListener("mouseover", () => {
 	switch8.id = "visibleswitch8";
 });
+
 //make switch for each unit disappear----------------
 item1.addEventListener("mouseleave", () => {
 	let switch1 = document.getElementById("visibleswitch1");
 	switch1.id = "switchcontainer1";
 });
-
 item2.addEventListener("mouseleave", () => {
 	let switch2 = document.getElementById("visibleswitch2");
 	switch2.id = "switchcontainer2";
@@ -179,22 +174,18 @@ definition1.addEventListener("click", () => {
 	moveCarousel(unit1_vocab, 1);
 	topright.innerHTML = "Scientific Method";
 });
-
 word2.addEventListener("click", () => {
 	moveCarousel(unit2_vocab, 0);
 	topright.innerHTML = "Life and Cells";
 });
-
 definition2.addEventListener("click", () => {
 	moveCarousel(unit2_vocab, 1);
 	topright.innerHTML = "Life and Cells";
 });
-
 word3.addEventListener("click", () => {
 	moveCarousel(unit3_vocab, 0);
 	topright.innerHTML = "Nutrition";
 });
-
 definition3.addEventListener("click", () => {
 	moveCarousel(unit3_vocab, 1);
 	topright.innerHTML = "Nutrition";
@@ -203,7 +194,6 @@ word4.addEventListener("click", () => {
 	moveCarousel(unit4_vocab, 0);
 	topright.innerHTML = "Respiration/Photosynthesis";
 });
-
 definition4.addEventListener("click", () => {
 	moveCarousel(unit4_vocab, 1);
 	topright.innerHTML = "Respiration/Photosynthesis";
@@ -212,17 +202,14 @@ word5.addEventListener("click", () => {
 	moveCarousel(unit5_vocab, 0);
 	topright.innerHTML = "Homeostasis";
 });
-
 definition5.addEventListener("click", () => {
 	moveCarousel(unit5_vocab, 1);
 	topright.innerHTML = "Homeostasis";
 });
-
 word6.addEventListener("click", () => {
 	moveCarousel(unit6_vocab, 0);
 	topright.innerHTML = "Genetics";
 });
-
 definition6.addEventListener("click", () => {
 	moveCarousel(unit6_vocab, 1);
 	topright.innerHTML = "Genetics";
@@ -231,7 +218,6 @@ word7.addEventListener("click", () => {
 	moveCarousel(unit7_vocab, 0);
 	topright.innerHTML = "Evolution";
 });
-
 definition7.addEventListener("click", () => {
 	moveCarousel(unit7_vocab, 1);
 	topright.innerHTML = "Evolution";
@@ -240,7 +226,6 @@ word8.addEventListener("click", () => {
 	moveCarousel(unit8_vocab, 0);
 	topright.innerHTML = "Ecology";
 });
-
 definition8.addEventListener("click", () => {
 	moveCarousel(unit8_vocab, 1);
 	topright.innerHTML = "Ecology";

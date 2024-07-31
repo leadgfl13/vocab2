@@ -56,8 +56,7 @@ export function moveCarousel(unit, choice) {
 //left and right arrow functions
 
 export function leftArrow(thing) {
-	let leftarrow = document.getElementById("left");
-	let rightarrow = document.getElementById("right");
+	let leftarrow = document.getElementById("leftarrow");
 	leftarrow.addEventListener("click", () => {
 		if (counter == 0) {
 			counter = keys.length - 1;
@@ -71,6 +70,7 @@ export function leftArrow(thing) {
 		return counter;
 	});
 }
+let rightarrow = document.getElementById("rightarrow");
 
 rightarrow.addEventListener("click", () => {
 	if (counter == keys.length - 1) {
