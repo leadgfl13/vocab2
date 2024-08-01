@@ -169,68 +169,84 @@ item8.addEventListener("mouseleave", () => {
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
 	const [newcounter, newkeys, newvalues] = moveCarousel(unit1_vocab, 0);
-	topright.innerHTML = "Scientific Method";
 	(counter = newcounter), (keys = newkeys), (values = newvalues);
+	topright.innerHTML = "Scientific Method";
 });
 
 definition1.addEventListener("click", () => {
-	moveCarousel(unit1_vocab, 1);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit1_vocab, 1);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Scientific Method";
 });
 word2.addEventListener("click", () => {
-	moveCarousel(unit2_vocab, 0);
+	console.log("Hello");
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit2_vocab, 0);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Life and Cells";
 });
 definition2.addEventListener("click", () => {
-	moveCarousel(unit2_vocab, 1);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit2_vocab, 1);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Life and Cells";
 });
 word3.addEventListener("click", () => {
-	moveCarousel(unit3_vocab, 0);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit3_vocab, 0);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Nutrition";
 });
 definition3.addEventListener("click", () => {
-	moveCarousel(unit3_vocab, 1);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit3_vocab, 1);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Nutrition";
 });
 word4.addEventListener("click", () => {
-	moveCarousel(unit4_vocab, 0);
-	topright.innerHTML = "Respiration/Photosynthesis";
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit4_vocab, 0);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
+	topright.innerHTML = "Homeostasis";
 });
 definition4.addEventListener("click", () => {
-	moveCarousel(unit4_vocab, 1);
-	topright.innerHTML = "Respiration/Photosynthesis";
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit4_vocab, 1);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
+	topright.innerHTML = "Homeostasis";
 });
 word5.addEventListener("click", () => {
-	moveCarousel(unit5_vocab, 0);
-	topright.innerHTML = "Homeostasis";
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit5_vocab, 0);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
+	topright.innerHTML = "Respiration/Photosynthesis";
 });
 definition5.addEventListener("click", () => {
-	moveCarousel(unit5_vocab, 1);
-	topright.innerHTML = "Homeostasis";
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit5_vocab, 1);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
+	topright.innerHTML = "Respiration/Photosynthesis";
 });
 word6.addEventListener("click", () => {
-	moveCarousel(unit6_vocab, 0);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit6_vocab, 0);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Genetics";
 });
 definition6.addEventListener("click", () => {
-	moveCarousel(unit6_vocab, 1);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit6_vocab, 1);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Genetics";
 });
 word7.addEventListener("click", () => {
-	moveCarousel(unit7_vocab, 0);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit7_vocab, 0);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Evolution";
 });
 definition7.addEventListener("click", () => {
-	moveCarousel(unit7_vocab, 1);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit7_vocab, 1);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Evolution";
 });
 word8.addEventListener("click", () => {
-	moveCarousel(unit8_vocab, 0);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit8_vocab, 0);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Ecology";
 });
 definition8.addEventListener("click", () => {
-	moveCarousel(unit8_vocab, 1);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit8_vocab, 1);
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Ecology";
 });
 
