@@ -23,13 +23,12 @@ export function moveCarousel(unit, choice) {
 		dot.setAttribute("id", "dots" + i);
 		//function to make dot click and showcase the corresponding card
 		dot.addEventListener("click", () => {
+			console.log("hello");
 			counter = i;
 			//need to update image
 			front.innerHTML = keys[counter];
 			back.innerHTML = values[counter];
 			checkDots();
-
-			return counter, unit;
 		});
 		carouseldots.append(dot);
 		checkDots();
@@ -50,29 +49,23 @@ export function moveCarousel(unit, choice) {
 			}
 		}
 	}
-	return { counter, unit, keys, values };
+	return [counter, keys, values];
 }
 
-//left and right arrow functions
+function leftArrowClick() {
+	if (counter == 0) {
+		counter = keys.length - 1;
+	} else {
+		counter = counter - 1;
+	}
+	front.innerHTML = keys[counter];
+	back.innerHTML = values[counter];
 
-export function leftArrow(thing) {
-	let leftarrow = document.getElementById("leftarrow");
-	leftarrow.addEventListener("click", () => {
-		if (counter == 0) {
-			counter = keys.length - 1;
-		} else {
-			counter = counter - 1;
-		}
-		front.innerHTML = keys[counter];
-		back.innerHTML = values[counter];
-
-		checkDots();
-		return counter;
-	});
+	checkDots();
 }
-let rightarrow = document.getElementById("rightarrow");
 
-rightarrow.addEventListener("click", () => {
+function rightArrowClick() {
+	alert("Hello?");
 	if (counter == keys.length - 1) {
 		counter = 0;
 	} else {
@@ -82,4 +75,5 @@ rightarrow.addEventListener("click", () => {
 	back.innerHTML = values[counter];
 	checkDots();
 	return counter;
-});
+}
+//left and right arrow functions

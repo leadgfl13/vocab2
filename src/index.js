@@ -9,7 +9,10 @@ import { unit5_vocab } from "./modules/units";
 import { unit6_vocab } from "./modules/units";
 import { unit7_vocab } from "./modules/units";
 import { unit8_vocab } from "./modules/units";
-
+let currentcarousel = "";
+let unit = "";
+let keys = "";
+let values = "";
 //declare unit variables
 const unit1 = unit1_vocab;
 const unit2 = unit2_vocab;
@@ -165,9 +168,9 @@ item8.addEventListener("mouseleave", () => {
 
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
-	test = moveCarousel(unit1_vocab, 0);
-	console.log(test);
+	const [newcounter, newkeys, newvalues] = moveCarousel(unit1_vocab, 0);
 	topright.innerHTML = "Scientific Method";
+	(counter = newcounter), (keys = newkeys), (values = newvalues);
 });
 
 definition1.addEventListener("click", () => {
@@ -231,33 +234,54 @@ definition8.addEventListener("click", () => {
 	topright.innerHTML = "Ecology";
 });
 
-//functions for left and right arrow, and changing counter
+//NEED THIS FUNCTION TO GET THE UNIT that is currently selected
+function getVariables() {}
 
 leftbutton.addEventListener("click", () => {
-	// needs to take the output of the carousel container to then use
-	//if (counter == 0) {
-	//	counter = keys.length - 1;
-	//} else {
-	//	counter = counter - 1;
-	//}
-	//front.innerHTML = keys[counter];
-	//back.innerHTML = values[counter];
-	//checkDots();
-	//return counter;
+	testRun(counter, keys, values);
 });
+//=> {
+//needs to take the output of the carousel container to then use
+//if (counter == 0) {
+//	counter = keys.length - 1;
+//} else {
+//	counter = counter - 1;
+//}
+//front.innerHTML = keys[counter];
+//back.innerHTML = values[counter];
+//checkDots();
+//return counter;
+//});
 
-rightarrow.addEventListener("click", () => {
-	//needs to take the output of the carousel container to then use
-	if (counter == keys.length - 1) {
-		counter = 0;
+function testRun(thecounter, thekeys, thevalues) {
+	console.log("This is in the testRun function");
+	console.log("The counter is " + thecounter);
+	console.log("The keys are  " + thekeys);
+	console.log("The values are " + thevalues);
+
+	if (thecounter == 0) {
+		thecounter = thekeys.length - 1;
 	} else {
-		counter = counter + 1;
+		thecounter = thecounter - 1;
 	}
-	front.innerHTML = keys[counter];
-	back.innerHTML = values[counter];
+	front.innerHTML = thekeys[thecounter];
+	back.innerHTML = thevalues[thecounter];
+	counter = thecounter;
 	checkDots();
-	return counter;
-});
+}
+
+//rightarrow.addEventListener("click", () => {
+//needs to take the output of the carousel container to then use
+//if (counter == keys.length - 1) {
+//	counter = 0;
+//} else {
+//	counter = counter + 1;
+//}
+//front.innerHTML = keys[counter];
+//back.innerHTML = values[counter];
+//checkDots();
+//return counter;
+//});
 //resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
 function checkDots() {
 	for (let i = 0; i < keys.length; i++) {
