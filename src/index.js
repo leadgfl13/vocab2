@@ -57,25 +57,24 @@ back.addEventListener("click", () => {
 });
 
 //lets card flip on f press
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keypress", function (event) {
 	if (event.key === "f") {
 		let card = document.getElementsByClassName("card");
 		for (let i = 0; i < card.length; i++) {
-			card[i].style.cursor = "pointer";
-			card[i].style.transform = "rotateY(180deg)";
+			card[i].classList.toggle("flipped");
 		}
 	}
 });
-//lets card flip back on f release
-document.addEventListener("keyup", function (event) {
-	if (event.key === "f") {
-		let card = document.getElementsByClassName("card");
-		for (let i = 0; i < card.length; i++) {
-			card[i].style.cursor = "pointer";
-			card[i].style.transform = "rotateY(0deg)";
-		}
-	}
-});
+//Old style of rotating card "smootly"
+//document.addEventListener("keyup", function (event) {
+//if (event.key === "f") {
+//	let card = document.getElementsByClassName("card");
+//for (let i = 0; i < card.length; i++) {
+//	card[i].style.cursor = "pointer";
+//	card[i].style.transform = "rotateY(0deg)";
+//}
+//}
+//});
 
 let topright = document.getElementById("topright");
 let menu = document.getElementById("menubutton");
@@ -305,6 +304,10 @@ function testRun(thecounter, thekeys, thevalues) {
 	}
 	front.innerHTML = thekeys[thecounter];
 	back.innerHTML = thevalues[thecounter];
+	if (front.innerHTML == "undefined" || back.innerHTML == "undefined") {
+		front.innerHTML = "select a unit!";
+		back.innerHTML = "select a unit!";
+	}
 	counter = thecounter;
 	checkDots();
 }
@@ -318,6 +321,10 @@ function rightRun(thecounter, thekeys, thevalues) {
 	}
 	front.innerHTML = thekeys[thecounter];
 	back.innerHTML = thevalues[thecounter];
+	if (front.innerHTML == "undefined" || back.innerHTML == "undefined") {
+		front.innerHTML = "select a unit!";
+		back.innerHTML = "select a unit!";
+	}
 	counter = thecounter;
 
 	checkDots();
