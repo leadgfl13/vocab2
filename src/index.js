@@ -26,6 +26,8 @@ const unit8 = unit8_vocab;
 //Global variables on main page
 const leftbutton = document.getElementById("leftarrow");
 const rightbutton = document.getElementById("rightarrow");
+let front = document.getElementById("front");
+let back = document.getElementById("back");
 
 let counter = 0;
 let carousel = document.getElementById("carouselcontainer");
@@ -40,7 +42,14 @@ let switch7 = document.getElementById("switchcontainer7");
 let switch8 = document.getElementById("switchcontainer8");
 
 // causes card to flip on a click
-carousel.addEventListener("click", () => {
+front.addEventListener("click", () => {
+	let card = document.getElementsByClassName("card");
+	for (let i = 0; i < card.length; i++) {
+		card[i].classList.toggle("flipped");
+	}
+});
+
+back.addEventListener("click", () => {
 	let card = document.getElementsByClassName("card");
 	for (let i = 0; i < card.length; i++) {
 		card[i].classList.toggle("flipped");
@@ -78,7 +87,6 @@ let item5 = document.getElementById("dropdown5");
 let item6 = document.getElementById("dropdown6");
 let item7 = document.getElementById("dropdown7");
 let item8 = document.getElementById("dropdown8");
-let back = document.getElementById("back");
 
 // word and definition buttons
 let word1 = document.getElementById("word1");
@@ -285,7 +293,7 @@ function makeRandom(theunit) {
 	console.log(keys.length);
 	counter = Math.floor(Math.random() * keys.length);
 	front.innerHTML = keys[counter];
-	back.innerHTML = keys[counter];
+	back.innerHTML = values[counter];
 	return counter;
 }
 
