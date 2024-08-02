@@ -92,9 +92,6 @@ button:hover {
 	background-color: skyblue;
 }
 
-button:active {
-	animation: bounce 0.5s;
-}
 body {
 	background-color: rgb(156, 197, 176);
 }

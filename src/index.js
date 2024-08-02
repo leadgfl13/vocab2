@@ -168,6 +168,7 @@ item8.addEventListener("mouseleave", () => {
 
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
+	alert("Hello");
 	const [newcounter, newkeys, newvalues] = moveCarousel(unit1_vocab, 0);
 	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Scientific Method";
@@ -250,15 +251,17 @@ definition8.addEventListener("click", () => {
 	topright.innerHTML = "Ecology";
 });
 
-//NEED THIS FUNCTION TO GET THE UNIT that is currently selected
-function getVariables() {}
-
+//adds the event listener for the left and right arrow
 leftbutton.addEventListener("click", () => {
 	testRun(counter, keys, values);
 });
 
 rightbutton.addEventListener("click", () => {
 	rightRun(counter, keys, values);
+});
+
+document.addEventListener("keydown", function (event) {
+	if (event.key === "ArrowLeft") testRun(counter, keys, values);
 });
 //=> {
 //needs to take the output of the carousel container to then use
