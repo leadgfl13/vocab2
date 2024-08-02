@@ -32,6 +32,8 @@ export function moveCarousel(unit, choice) {
 			back.innerHTML = values[counter];
 		});
 		carouseldots.append(dot);
+		let firstdot = document.getElementById("dots0");
+		firstdot.style.backgroundColor = "black";
 	}
 	//functions for left and right arrow, and changing counter
 
