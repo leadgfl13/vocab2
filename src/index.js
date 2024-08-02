@@ -266,6 +266,14 @@ document.addEventListener("keydown", function (event) {
 document.addEventListener("keydown", function (event) {
 	if (event.key === "ArrowRight") rightRun(counter, keys, values);
 });
+
+document.addEventListener("keydown", function (event) {
+	if (event.key === " ") alert("Space");
+});
+
+document.addEventListener("keydown", function (event) {
+	if (event.key === "i") alert("i");
+});
 //=> {
 //needs to take the output of the carousel container to then use
 //if (counter == 0) {
