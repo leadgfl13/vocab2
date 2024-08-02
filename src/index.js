@@ -263,6 +263,9 @@ rightbutton.addEventListener("click", () => {
 document.addEventListener("keydown", function (event) {
 	if (event.key === "ArrowLeft") testRun(counter, keys, values);
 });
+document.addEventListener("keydown", function (event) {
+	if (event.key === "ArrowRight") rightRun(counter, keys, values);
+});
 //=> {
 //needs to take the output of the carousel container to then use
 //if (counter == 0) {
