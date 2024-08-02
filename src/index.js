@@ -268,7 +268,11 @@ document.addEventListener("keydown", function (event) {
 });
 
 document.addEventListener("keydown", function (event) {
-	if (event.key === " ") alert("Space");
+	if (event.key === " ") {
+		let temp = front.innerHTML;
+		front.innerHTML = back.innerHTML;
+		back.innerHTML = temp;
+	}
 });
 
 document.addEventListener("keydown", function (event) {
@@ -323,20 +327,5 @@ function checkDots() {
 			var thisdot = document.getElementById("dots" + i);
 			thisdot.style.backgroundColor = "black";
 		}
-	}
-}
-
-function leftPress(event) {
-	if (event.keyCode === 37) {
-		if (counter == 0) {
-			counter = keys.length - 1;
-		} else {
-			counter = counter - 1;
-		}
-		front.innerHTML = keys[counter];
-		back.innerHTML = values[counter];
-
-		checkDots();
-		return counter;
 	}
 }
