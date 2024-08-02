@@ -168,7 +168,6 @@ item8.addEventListener("mouseleave", () => {
 
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
-	alert("Hello");
 	const [newcounter, newkeys, newvalues] = moveCarousel(unit1_vocab, 0);
 	(counter = newcounter), (keys = newkeys), (values = newvalues);
 	topright.innerHTML = "Scientific Method";
@@ -276,20 +275,19 @@ document.addEventListener("keydown", function (event) {
 });
 
 document.addEventListener("keydown", function (event) {
-	if (event.key === "i") alert("i");
+	if (event.key === "i") {
+		makeRandom();
+		checkDots();
+	}
 });
-//=> {
-//needs to take the output of the carousel container to then use
-//if (counter == 0) {
-//	counter = keys.length - 1;
-//} else {
-//	counter = counter - 1;
-//}
-//front.innerHTML = keys[counter];
-//back.innerHTML = values[counter];
-//checkDots();
-//return counter;
-//});
+
+function makeRandom(theunit) {
+	console.log(keys.length);
+	counter = Math.floor(Math.random() * keys.length);
+	front.innerHTML = keys[counter];
+	back.innerHTML = keys[counter];
+	return counter;
+}
 
 function testRun(thecounter, thekeys, thevalues) {
 	if (thecounter == 0) {
@@ -317,7 +315,7 @@ function rightRun(thecounter, thekeys, thevalues) {
 	checkDots();
 }
 //resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
-function checkDots() {
+export function checkDots() {
 	for (let i = 0; i < keys.length; i++) {
 		if (counter == i) {
 			let dots = document.getElementsByClassName("circle");

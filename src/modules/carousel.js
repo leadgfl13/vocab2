@@ -1,4 +1,7 @@
+import { checkDots } from "..";
+
 export function moveCarousel(unit, choice) {
+	checkDots();
 	let carousel = document.getElementById("carouselcontainer");
 	let front = document.getElementById("front");
 	let back = document.getElementById("back");
@@ -23,57 +26,16 @@ export function moveCarousel(unit, choice) {
 		dot.setAttribute("id", "dots" + i);
 		//function to make dot click and showcase the corresponding card
 		dot.addEventListener("click", () => {
-			console.log("hello");
 			counter = i;
 			//need to update image
 			front.innerHTML = keys[counter];
 			back.innerHTML = values[counter];
-			checkDots();
 		});
 		carouseldots.append(dot);
-		checkDots();
 	}
-
 	//functions for left and right arrow, and changing counter
 
 	//resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
-	function checkDots() {
-		for (let i = 0; i < keys.length; i++) {
-			if (counter == i) {
-				let dots = document.getElementsByClassName("circle");
-				for (let i = 0; i < dots.length; i++) {
-					dots[i].style.backgroundColor = "gray";
-				}
-				var thisdot = document.getElementById("dots" + i);
-				thisdot.style.backgroundColor = "black";
-			}
-		}
-	}
+
 	return [counter, keys, values];
 }
-
-function leftArrowClick() {
-	if (counter == 0) {
-		counter = keys.length - 1;
-	} else {
-		counter = counter - 1;
-	}
-	front.innerHTML = keys[counter];
-	back.innerHTML = values[counter];
-
-	checkDots();
-}
-
-function rightArrowClick() {
-	alert("Hello?");
-	if (counter == keys.length - 1) {
-		counter = 0;
-	} else {
-		counter = counter + 1;
-	}
-	front.innerHTML = keys[counter];
-	back.innerHTML = values[counter];
-	checkDots();
-	return counter;
-}
-//left and right arrow functions
