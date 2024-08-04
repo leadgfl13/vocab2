@@ -1,4 +1,5 @@
 import "./style.css";
+import { doDots } from "./modules/carousel";
 import { leftArrow } from "./modules/carousel";
 import { moveCarousel } from "./modules/carousel";
 import { unit1_vocab } from "./modules/units";
@@ -13,6 +14,7 @@ let currentcarousel = "";
 let unit = "";
 let keys = "";
 let values = "";
+let dots = "";
 //declare unit variables
 const unit1 = unit1_vocab;
 const unit2 = unit2_vocab;
@@ -176,8 +178,21 @@ item8.addEventListener("mouseleave", () => {
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
 	const [newcounter, newkeys, newvalues] = moveCarousel(unit1_vocab, 0);
-	(counter = newcounter), (keys = newkeys), (values = newvalues);
+	counter = newcounter;
+	keys = newkeys;
+	values = newvalues;
+	const [secondcounter, secondkeys, secondvalues] = doDots(
+		counter,
+		keys,
+		values
+	);
+	counter = secondcounter;
+	keys = secondkeys;
+	values = secondvalues;
+	checkDots();
+
 	topright.innerHTML = "Scientific Method";
+	return counter, keys, values;
 });
 
 definition1.addEventListener("click", () => {
@@ -260,6 +275,7 @@ definition8.addEventListener("click", () => {
 //adds the event listener for the left and right arrow
 leftbutton.addEventListener("click", () => {
 	testRun(counter, keys, values);
+	console.log(counter);
 });
 
 rightbutton.addEventListener("click", () => {
@@ -288,18 +304,21 @@ document.addEventListener("keydown", function (event) {
 	}
 });
 
-function makeRandom(theunit) {
+function makeRandom() {
 	console.log(keys.length);
 	counter = Math.floor(Math.random() * keys.length);
 	front.innerHTML = keys[counter];
 	back.innerHTML = values[counter];
-	return counter;
 }
 
 function testRun(thecounter, thekeys, thevalues) {
+	console.log("This should be the current counter " + thecounter);
+	counter = thecounter;
 	if (thecounter == 0) {
+		console.log("the counter equals zero " + thecounter);
 		thecounter = thekeys.length - 1;
 	} else {
+		console.log("the counter is not zero " + thecounter);
 		thecounter = thecounter - 1;
 	}
 	front.innerHTML = thekeys[thecounter];
@@ -331,12 +350,11 @@ function rightRun(thecounter, thekeys, thevalues) {
 }
 //resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
 export function checkDots() {
+	dots = document.getElementsByClassName("circle");
 	for (let i = 0; i < keys.length; i++) {
+		dots[i].style.backgroundColor = "gray";
+
 		if (counter == i) {
-			let dots = document.getElementsByClassName("circle");
-			for (let i = 0; i < dots.length; i++) {
-				dots[i].style.backgroundColor = "gray";
-			}
 			var thisdot = document.getElementById("dots" + i);
 			thisdot.style.backgroundColor = "black";
 		}
