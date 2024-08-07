@@ -39,6 +39,16 @@ export function doDots(thekeys, thevalues) {
 			back.innerHTML = thevalues[counter.number];
 			checkDots();
 		});
+		dots[i].addEventListener("mouseover", () => {
+			let hover = document.createElement("div");
+			hover.setAttribute("class", "hovering");
+			hover.innerHTML = thekeys[i];
+			dots[i].append(hover);
+			setTimeout(1000);
+		});
+		dots[i].addEventListener("mouseleave", () => {
+			dots[i].innerHTML = "";
+		});
 		//this checks the colors and changes them so that only the counter is dark
 	}
 
