@@ -353,7 +353,7 @@ export function checkDots() {
 	for (let i = 0; i < keys.length; i++) {
 		dots[i].style.backgroundColor = "gray";
 
-		if (counter == i) {
+		if (counter.number == i) {
 			var thisdot = document.getElementById("dots" + i);
 			thisdot.style.backgroundColor = "black";
 		}

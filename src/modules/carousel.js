@@ -37,13 +37,10 @@ export function doDots(thekeys, thevalues) {
 			counter.number = i;
 			front.innerHTML = thekeys[counter.number];
 			back.innerHTML = thevalues[counter.number];
-			dots[i].style.backgroundColor = "gray";
-			var thisdot = document.getElementById("dots" + i);
-			thisdot.style.backgroundColor = "black";
+			checkDots();
 		});
 		//this checks the colors and changes them so that only the counter is dark
 	}
-	checkDots();
 
 	//resets all dots to gray, then checks the counter number, and makes the dot with that counter ID red
 }
