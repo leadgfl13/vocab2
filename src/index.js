@@ -31,7 +31,18 @@ const rightbutton = document.getElementById("rightarrow");
 let front = document.getElementById("front");
 let back = document.getElementById("back");
 
-let counter = 0;
+export let counter = {
+	_number: 0, // Internal variable to store the value
+
+	get number() {
+		return this._number;
+	},
+
+	set number(value) {
+		this._number = value;
+	},
+};
+
 let carousel = document.getElementById("carouselcontainer");
 let test = document.getElementById("dropdowncontainer");
 let switch1 = document.getElementById("switchcontainer1");
@@ -177,18 +188,12 @@ item8.addEventListener("mouseleave", () => {
 
 //event listener for selection of choice on unit 1
 word1.addEventListener("click", () => {
-	const [newcounter, newkeys, newvalues] = moveCarousel(unit1_vocab, 0);
-	counter = newcounter;
+	const [newkeys, newvalues] = moveCarousel(unit1_vocab, 0);
+
+	doDots(newkeys, newvalues);
+
 	keys = newkeys;
 	values = newvalues;
-	const [secondcounter, secondkeys, secondvalues] = doDots(
-		counter,
-		keys,
-		values
-	);
-	counter = secondcounter;
-	keys = secondkeys;
-	values = secondvalues;
 	checkDots();
 
 	topright.innerHTML = "Scientific Method";
@@ -274,19 +279,19 @@ definition8.addEventListener("click", () => {
 
 //adds the event listener for the left and right arrow
 leftbutton.addEventListener("click", () => {
-	testRun(counter, keys, values);
+	testRun(keys, values);
 	console.log(counter);
 });
 
 rightbutton.addEventListener("click", () => {
-	rightRun(counter, keys, values);
+	rightRun(keys, values);
 });
 
 document.addEventListener("keydown", function (event) {
-	if (event.key === "ArrowLeft") testRun(counter, keys, values);
+	if (event.key === "ArrowLeft") testRun(keys, values);
 });
 document.addEventListener("keydown", function (event) {
-	if (event.key === "ArrowRight") rightRun(counter, keys, values);
+	if (event.key === "ArrowRight") rightRun(keys, values);
 });
 
 document.addEventListener("keydown", function (event) {
@@ -306,45 +311,39 @@ document.addEventListener("keydown", function (event) {
 
 function makeRandom() {
 	console.log(keys.length);
-	counter = Math.floor(Math.random() * keys.length);
-	front.innerHTML = keys[counter];
-	back.innerHTML = values[counter];
+	counter.number = Math.floor(Math.random() * keys.length);
+	front.innerHTML = keys[counter.number];
+	back.innerHTML = values[counter.number];
 }
 
-function testRun(thecounter, thekeys, thevalues) {
-	console.log("This should be the current counter " + thecounter);
-	counter = thecounter;
-	if (thecounter == 0) {
-		console.log("the counter equals zero " + thecounter);
-		thecounter = thekeys.length - 1;
+function testRun(thekeys, thevalues) {
+	if (counter.number == 0) {
+		counter.number = thekeys.length - 1;
 	} else {
-		console.log("the counter is not zero " + thecounter);
-		thecounter = thecounter - 1;
+		counter.number = counter.number - 1;
 	}
-	front.innerHTML = thekeys[thecounter];
-	back.innerHTML = thevalues[thecounter];
+	front.innerHTML = thekeys[counter.number];
+	back.innerHTML = thevalues[counter.number];
 	if (front.innerHTML == "undefined" || back.innerHTML == "undefined") {
 		front.innerHTML = "select a unit!";
 		back.innerHTML = "select a unit!";
 	}
-	counter = thecounter;
 	checkDots();
 }
 
-function rightRun(thecounter, thekeys, thevalues) {
+function rightRun(thekeys, thevalues) {
 	//needs to take the output of the carousel container to then use
-	if (thecounter == keys.length - 1) {
-		thecounter = 0;
+	if (counter.number == keys.length - 1) {
+		counter.number = 0;
 	} else {
-		thecounter = thecounter + 1;
+		counter.number = counter.number + 1;
 	}
-	front.innerHTML = thekeys[thecounter];
-	back.innerHTML = thevalues[thecounter];
+	front.innerHTML = thekeys[counter.number];
+	back.innerHTML = thevalues[counter.number];
 	if (front.innerHTML == "undefined" || back.innerHTML == "undefined") {
 		front.innerHTML = "select a unit!";
 		back.innerHTML = "select a unit!";
 	}
-	counter = thecounter;
 
 	checkDots();
 }
