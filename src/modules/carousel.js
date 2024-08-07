@@ -40,15 +40,21 @@ export function doDots(thekeys, thevalues) {
 			checkDots();
 		});
 		dots[i].addEventListener("mouseover", () => {
+			timeoutId = setTimeout(showPopup, 1000);
+		});
+		dots[i].addEventListener("mouseleave", () => {
+			clearTimeout(timeoutId);
+
+			dots[i].innerHTML = "";
+		});
+
+		function showPopup() {
 			let hover = document.createElement("div");
 			hover.setAttribute("class", "hovering");
 			hover.innerHTML = thekeys[i];
 			dots[i].append(hover);
-			setTimeout(1000);
-		});
-		dots[i].addEventListener("mouseleave", () => {
-			dots[i].innerHTML = "";
-		});
+		}
+		let timeoutId;
 		//this checks the colors and changes them so that only the counter is dark
 	}
 
