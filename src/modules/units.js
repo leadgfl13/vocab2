@@ -64,6 +64,26 @@ export let unit2_vocab = {
 		"Rigid structure found in some cells on the outside of the cell membrane that provides support and protection",
 	"Selectively(Semi) Permeable":
 		"A membrane(covering) that allows some substances to cross, but not others.  In the case of the cell membrane it is based on size",
+	Diffusion:
+		"The net movement of molecules from an area of HIGH concentration to LOW concentration",
+	"Facilitated Diffusion":
+		"Diffusion using channel proteins that act as doorways within the cell membrane.  These molecules would otherwise not be able to cross the cell membrane",
+	"Passive Transport":
+		"Movement of molecules where energy is NOT required.  Facilitated diffusion and simple diffusion are examples of this",
+	"Active Transport":
+		"When energy is used to move molecules opposite of the concentration gradient, from an area of Low concentration to High concentration",
+	Solvent: "Liquid in which solutes are dissolved",
+	Solute:
+		"a dissolved substance (Think of the salt in saltwater, or hot cocoa mix in hot cocoa",
+	Solution: "the combined mixture of solute and solvent",
+	"Hypertonic Solution":
+		"A solution in which there is a greater concentration of solutes on the outside of the cell, causing water to leave the cell",
+	"Hypotonic Solution":
+		"A solution in which there is a greater concetration of solutes on the inside of the cell, causing water to flow into the cell",
+	"Isotonic Solution":
+		"There is an equal concentration of solutes in an out of the cell, causing a net equal movement of water across the cell membrane",
+	Osmosis:
+		"A special type of diffusion that deals with movement of water across the cell membrane",
 };
 
 export let unit3_vocab = {
