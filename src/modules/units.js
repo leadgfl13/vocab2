@@ -87,13 +87,16 @@ export let unit2_vocab = {
 };
 
 export let unit3_vocab = {
-	"unit 3 word":
-		"Definition 1 this is a test to see how making the definition bigger affects the div size",
-	"word 2": "DEFINITION 2",
-	"word 3": "DEFINITION 3",
-	"word 4": "DEFINITION 4",
-	"word 5": "Definition 5",
-	"Word 6": "definition 6",
+	Photosynthesis:
+		"A process in which plants can take energy from the sun and convert it into a stable molecule(glucose) that can be used as a food source for energy",
+	Chloroplast: "An organelle found in plant cells where photosynthesis occurs ",
+	Chlorophyll:
+		"The green pigment found in chloroplast that capture sunlight for photosynthesis",
+	Stomata:
+		"Pores on the surface of leaves that open and close to allow for gas exchange",
+	"Guard Cells":
+		"Cells found surrounding the stomata that are responsible for opening and closing the stomata",
+	Epidermis: "The top layer",
 	"word 7": "definition 7",
 	"word 8": "defintion 8",
 	"word 9": "definition 9",
