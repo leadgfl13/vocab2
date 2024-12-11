@@ -10,6 +10,8 @@ import { unit5_vocab } from "./modules/units";
 import { unit6_vocab } from "./modules/units";
 import { unit7_vocab } from "./modules/units";
 import { unit8_vocab } from "./modules/units";
+import { unit9_vocab } from "./modules/units";
+
 let currentcarousel = "";
 let unit = "";
 let keys = "";
@@ -24,6 +26,7 @@ const unit5 = unit5_vocab;
 const unit6 = unit6_vocab;
 const unit7 = unit7_vocab;
 const unit8 = unit8_vocab;
+const unit9 = unit9_vocab;
 
 //Global variables on main page
 const leftbutton = document.getElementById("leftarrow");
@@ -53,6 +56,7 @@ let switch5 = document.getElementById("switchcontainer5");
 let switch6 = document.getElementById("switchcontainer6");
 let switch7 = document.getElementById("switchcontainer7");
 let switch8 = document.getElementById("switchcontainer8");
+let switch9 = document.getElementById("switchcontainer9");
 
 // causes card to flip on a click
 front.addEventListener("click", () => {
@@ -99,6 +103,7 @@ let item5 = document.getElementById("dropdown5");
 let item6 = document.getElementById("dropdown6");
 let item7 = document.getElementById("dropdown7");
 let item8 = document.getElementById("dropdown8");
+let item9 = document.getElementById("dropdown9");
 
 // word and definition buttons
 let word1 = document.getElementById("word1");
@@ -117,6 +122,8 @@ let word7 = document.getElementById("word7");
 let definition7 = document.getElementById("definition7");
 let word8 = document.getElementById("word8");
 let definition8 = document.getElementById("definition8");
+let word9 = document.getElementById("word9");
+let definition9 = document.getElementById("definition9");
 
 //make dropdown contanier visible
 menu.addEventListener("mouseover", () => {
@@ -150,6 +157,9 @@ item7.addEventListener("mouseover", () => {
 });
 item8.addEventListener("mouseover", () => {
 	switch8.id = "visibleswitch8";
+});
+item9.addEventListener("mouseover", () => {
+	switch9.id = "visibleswitch9";
 });
 
 //make switch for each unit disappear----------------
@@ -185,8 +195,12 @@ item8.addEventListener("mouseleave", () => {
 	let switch8 = document.getElementById("visibleswitch8");
 	switch8.id = "switchcontainer8";
 });
+item9.addEventListener("mouseleave", () => {
+	let switch9 = document.getElementById("visibleswitch9");
+	switch9.id = "switchcontainer9";
+});
 
-//event listener for selection of choice on unit 1
+//event listener for selection of choice on each unit, for the words the value is 0, for definition value is 1
 word1.addEventListener("click", () => {
 	const [newkeys, newvalues] = moveCarousel(unit1_vocab, 0);
 	doDots(newkeys, newvalues);
@@ -315,6 +329,22 @@ definition8.addEventListener("click", () => {
 	values = newvalues;
 	checkDots();
 	topright.innerHTML = "Ecology";
+});
+word9.addEventListener("click", () => {
+	const [newkeys, newvalues] = moveCarousel(unit9_vocab, 0);
+	doDots(newkeys, newvalues);
+	keys = newkeys;
+	values = newvalues;
+	checkDots();
+	topright.innerHTML = "Diffusion and Osmosis";
+});
+definition9.addEventListener("click", () => {
+	const [newkeys, newvalues] = moveCarousel(unit9_vocab, 1);
+	doDots(newkeys, newvalues);
+	keys = newkeys;
+	values = newvalues;
+	checkDots();
+	topright.innerHTML = "Diffusion and Osmosis";
 });
 
 //adds the event listener for the left and right arrow

@@ -235,3 +235,7 @@ export let unit8_vocab = {
 	"word 25": "definition 25",
 	"word 26": "Definition 26",
 };
+
+export let unit9_vocab = {
+	"unit 9 word": "Definition 1",
+};

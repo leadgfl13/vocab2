@@ -327,7 +327,8 @@ body {
 #switchcontainer5,
 #switchcontainer6,
 #switchcontainer7,
-#switchcontainer8 {
+#switchcontainer8,
+#switchcontainer9 {
 	width: 50%;
 	display: none;
 }
@@ -335,7 +336,8 @@ body {
 #visibleswitch1 #visibleswitch2,
 #visibleswitch3 #visibleswitch4,
 #visibleswitch5 #visibleswitch6,
-#visibleswitch7 #visibleswitch8 {
+#visibleswitch7 #visibleswitch8,
+#visibleswitch9 {
 	animation: fadeinfromtop 0.5s forwards;
 	display: flex;
 	flex-direction: row;
