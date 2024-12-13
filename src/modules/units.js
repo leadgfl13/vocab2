@@ -64,26 +64,6 @@ export let unit2_vocab = {
 		"Rigid structure found in some cells on the outside of the cell membrane that provides support and protection",
 	"Selectively(Semi) Permeable":
 		"A membrane(covering) that allows some substances to cross, but not others.  In the case of the cell membrane it is based on size",
-	Diffusion:
-		"The net movement of molecules from an area of HIGH concentration to LOW concentration",
-	"Facilitated Diffusion":
-		"Diffusion using channel proteins that act as doorways within the cell membrane.  These molecules would otherwise not be able to cross the cell membrane",
-	"Passive Transport":
-		"Movement of molecules where energy is NOT required.  Facilitated diffusion and simple diffusion are examples of this",
-	"Active Transport":
-		"When energy is used to move molecules opposite of the concentration gradient, from an area of Low concentration to High concentration",
-	Solvent: "Liquid in which solutes are dissolved",
-	Solute:
-		"a dissolved substance (Think of the salt in saltwater, or hot cocoa mix in hot cocoa",
-	Solution: "the combined mixture of solute and solvent",
-	"Hypertonic Solution":
-		"A solution in which there is a greater concentration of solutes on the outside of the cell, causing water to leave the cell",
-	"Hypotonic Solution":
-		"A solution in which there is a greater concetration of solutes on the inside of the cell, causing water to flow into the cell",
-	"Isotonic Solution":
-		"There is an equal concentration of solutes in an out of the cell, causing a net equal movement of water across the cell membrane",
-	Osmosis:
-		"A special type of diffusion that deals with movement of water across the cell membrane",
 };
 
 export let unit3_vocab = {
@@ -113,17 +93,25 @@ export let unit4_vocab = {
 		"Pores on the surface of leaves that open and close to allow for gas exchange",
 	"Guard Cells":
 		"Cells found surrounding the stomata that are responsible for opening and closing the stomata",
-	Epidermis: "The top layer",
-	"word 7": "definition 7",
-	"word 8": "defintion 8",
-	"word 9": "definition 9",
-	"word 10": "definition 10",
-	"word 11": "definition 11",
-	"word 12": "Definition 12",
-	"word 13": "Defintion 13",
-	"word 14": "definition 14",
-	"word 15": "definition 15",
-	"word 16": "Definition 16",
+	Epidermis: "The top layer of the leaf",
+	ATP: "Adenosine Triphosphate, also known as the molecule used for cellular activites.  AKA the energy your cells run on",
+	"Cellular Respiration":
+		"The process in which the energy in glucose is converted into usable energy in the form of ATP",
+	"Aerobic Respiration":
+		" A type of ceullar respiration that occurs in the mitochondria in which oxygen is used to convert more energy within glucose into ATP",
+	"Anaerobic Respiration":
+		"A type of cellular respiration that takes place in the cytoplasm and does not require oxygen.  Only produces 4 ATP",
+	Glycolysis:
+		"The first step in cellular respiration in which glucose is broken up into 2 pyruvate molecues.  Takes place in the cytoplasm",
+	"lactic acid fermentation":
+		"A specific type of anaerobic respiration that produces lactic acidl  When produced in our muscle cells it creates the burn.  Also used to create yogurt and cheese by using bacteria",
+	"alcoholic fermentation":
+		"A specific type of anaerobic respiration that is perfomed by yeast and produces alcohol, humans use this process to produce beer, wine, and alcohol",
+	mitochondria:
+		"an organelle found in eukaryotic organisms.  Site of aerobic cellular respiration",
+	Chloroplast: "an organelle found within plants.  Site of photosynthesis",
+	Chlorophyll:
+		"The green pigment that is responsible for capturing sunlight for the process of photosynthesis.  Found in the chloroplast",
 	"word 17": "Defintion 17",
 	"word 18": "definition 18",
 	"word 19": "definition 19",
@@ -233,5 +221,24 @@ export let unit8_vocab = {
 };
 
 export let unit9_vocab = {
-	"unit 9 word": "Definition 1",
+	Diffusion:
+		"The net movement of molecules from an area of HIGH concentration to LOW concentration",
+	"Facilitated Diffusion":
+		"Diffusion using channel proteins that act as doorways within the cell membrane.  These molecules would otherwise not be able to cross the cell membrane",
+	"Passive Transport":
+		"Movement of molecules where energy is NOT required.  Facilitated diffusion and simple diffusion are examples of this",
+	"Active Transport":
+		"When energy is used to move molecules opposite of the concentration gradient, from an area of Low concentration to High concentration",
+	Solvent: "Liquid in which solutes are dissolved",
+	Solute:
+		"a dissolved substance (Think of the salt in saltwater, or hot cocoa mix in hot cocoa",
+	Solution: "the combined mixture of solute and solvent",
+	"Hypertonic Solution":
+		"A solution in which there is a greater concentration of solutes on the outside of the cell, causing water to leave the cell",
+	"Hypotonic Solution":
+		"A solution in which there is a greater concetration of solutes on the inside of the cell, causing water to flow into the cell",
+	"Isotonic Solution":
+		"There is an equal concentration of solutes in an out of the cell, causing a net equal movement of water across the cell membrane",
+	Osmosis:
+		"A special type of diffusion that deals with movement of water across the cell membrane",
 };
