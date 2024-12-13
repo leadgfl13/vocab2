@@ -1,6 +1,5 @@
 import "./style.css";
 import { doDots } from "./modules/carousel";
-import { leftArrow } from "./modules/carousel";
 import { moveCarousel } from "./modules/carousel";
 import { unit1_vocab } from "./modules/units";
 import { unit2_vocab } from "./modules/units";
