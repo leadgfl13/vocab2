@@ -255,7 +255,7 @@ word4.addEventListener("click", () => {
 	keys = newkeys;
 	values = newvalues;
 	checkDots();
-	topright.innerHTML = "Homeostasis";
+	topright.innerHTML = "Photosynthesis/Respiration";
 });
 definition4.addEventListener("click", () => {
 	const [newkeys, newvalues] = moveCarousel(unit4_vocab, 1);
@@ -263,7 +263,7 @@ definition4.addEventListener("click", () => {
 	keys = newkeys;
 	values = newvalues;
 	checkDots();
-	topright.innerHTML = "Homeostasis";
+	topright.innerHTML = "Photosynthesis/Respiration";
 });
 word5.addEventListener("click", () => {
 	const [newkeys, newvalues] = moveCarousel(unit5_vocab, 0);
@@ -271,15 +271,15 @@ word5.addEventListener("click", () => {
 	keys = newkeys;
 	values = newvalues;
 	checkDots();
-	topright.innerHTML = "Respiration/Photosynthesis";
+	topright.innerHTML = "Homeostasis";
 });
 definition5.addEventListener("click", () => {
-	const [newkeys, newvalues] = moveCarousel(unit65_vocab, 1);
+	const [newkeys, newvalues] = moveCarousel(unit5_vocab, 1);
 	doDots(newkeys, newvalues);
 	keys = newkeys;
 	values = newvalues;
 	checkDots();
-	topright.innerHTML = "Respiration/Photosynthesis";
+	topright.innerHTML = "Homeostasis";
 });
 word6.addEventListener("click", () => {
 	const [newkeys, newvalues] = moveCarousel(unit6_vocab, 0);
