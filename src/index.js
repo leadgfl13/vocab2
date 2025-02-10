@@ -239,7 +239,7 @@ word3.addEventListener("click", () => {
 	keys = newkeys;
 	values = newvalues;
 	checkDots();
-	topright.innerHTML = "Nutrition";
+	topright.innerHTML = "Diffusion/Nutrition";
 });
 definition3.addEventListener("click", () => {
 	const [newkeys, newvalues] = moveCarousel(unit3_vocab, 1);
@@ -247,7 +247,7 @@ definition3.addEventListener("click", () => {
 	keys = newkeys;
 	values = newvalues;
 	checkDots();
-	topright.innerHTML = "Nutrition";
+	topright.innerHTML = "Diffusion/Nutrition";
 });
 word4.addEventListener("click", () => {
 	const [newkeys, newvalues] = moveCarousel(unit4_vocab, 0);
