@@ -67,20 +67,35 @@ export let unit2_vocab = {
 };
 
 export let unit3_vocab = {
-	"word 7": "definition 7",
-	"word 8": "defintion 8",
-	"word 9": "definition 9",
-	"word 10": "definition 10",
-	"word 11": "definition 11",
-	"word 12": "Definition 12",
-	"word 13": "Defintion 13",
-	"word 14": "definition 14",
-	"word 15": "definition 15",
-	"word 16": "Definition 16",
-	"word 17": "Defintion 17",
-	"word 18": "definition 18",
-	"word 19": "definition 19",
-	"word 20": "Definition 20",
+	Diffusion:
+		" a process by which particles tend to move from an area where they are more concentrated to an area where they are less concentrated",
+	Osmosis: "diffusion of water through a selectively permeable membrane",
+	membrane: "a thin covering",
+	saccharide: "scientific name for sugars",
+	mono: "one",
+	poly: "more than one",
+	"dehydration synthesis":
+		"the combination of two molecules by removing a water molecule",
+	lipid:
+		"a macromolecule made mostly from carbon and hydrogen atoms; includes fats, waxes and oils",
+	enzyme:
+		"a protein catalyst that speeds up the rate of specific biological reactions, works based on shape",
+	substrate:
+		"the molecule that attaches to an enzyme to be broken down, based on shape",
+	proteins: "a macromolecule made up of amino acids",
+	"Semi-Permeable":
+		"Allows certain things to pass through. In the case of a cell it is based on size",
+	Glucose: "A simple mono saccharide that our body uses to create ATP",
+	"Surface Area":
+		"The amount of outside surface of an object.  The higher the surface area, the easier it is for cells to diffuse materials",
+	"Facilitated Diffusion": "When diffusion occurs across channel proteins",
+	"Passive Transport":
+		"Movement of molecules that does not require the use of ATP, this includes normal and passive diffusion",
+	"Amino Acids": "the sub-units that make up protein.  There are 20 of them",
+	"Active transport":
+		"movement of molecules across a concentration gradient from an area of low to high concentration",
+	"Channel Proteins":
+		"Embedded proteins in the cell membrane that act as doorways to allow moolecules to pass through",
 };
 
 export let unit4_vocab = {
@@ -119,27 +134,42 @@ export let unit4_vocab = {
 };
 
 export let unit5_vocab = {
-	"unit 5 word":
-		"Definition 1 this is a test to see how making the definition bigger affects the div size",
-	"word 2": "DEFINITION 2",
-	"word 3": "DEFINITION 3",
-	"word 4": "DEFINITION 4",
-	"word 5": "Definition 5",
-	"Word 6": "definition 6",
-	"word 7": "definition 7",
-	"word 8": "defintion 8",
-	"word 9": "definition 9",
-	"word 10": "definition 10",
-	"word 11": "definition 11",
-	"word 12": "Definition 12",
-	"word 13": "Defintion 13",
-	"word 14": "definition 14",
-	"word 15": "definition 15",
-	"word 16": "Definition 16",
-	"word 17": "Defintion 17",
-	"word 18": "definition 18",
-	"word 19": "definition 19",
-	"word 20": "Definition 20",
+	homeostasis:
+		" relatively constant intermal physical and chemical conditions that organisms maintain",
+	"dynamic equilibrium":
+		" constant shifting and response to external conditions to help maintain homeostasis",
+	hormones: "Chemical messengers",
+	antibody: "A Y shaped protein with a specific shape to bind to an antigen",
+	pathogen: "anything that can cause sickness",
+	antigen:
+		"a surface protein found on the outside of cels and viruses(typically referred to in the context of pathogens)",
+	"white blood cell":
+		" cells that are part of your immune system designed to help protect your body from foreign invaders",
+	inflammation:
+		"a generalized immune response that sends blood to a site of infection",
+	histamines: "chemical signals that cause an inflammation resoponse",
+	skin: "the bodys first defense",
+	"lymphatic system":
+		"a system consisting of lymph nodes and pathways designed for white blood cells to move throughout the body",
+	Lymph: "The fluid that flows through the lymphatic system",
+	"Cardiovascular system":
+		"The body system consisting of the heart and blood vessels that pumps blood through the body",
+	"Respiratory System":
+		"Body system consisting of the lungs that takes in and expels air",
+	"Endocrine System":
+		"Body system consisting of different glands that send hormones throughout the body",
+	"Excretory system":
+		"Body system consisting of organs like the kidneys that filter and get rid of bodily wastes",
+	Insulin:
+		"A hormone that tells the bodys cells to take in glucose from the blood",
+	Glucagon:
+		"A hormone that tells the body to release glucose into the blood stream",
+	"chemical receptors":
+		"receptors on the surface of cells designed to receive chemical signals based on shape",
+	immunity:
+		"the process in which your body builds up antibodies during an immune response to a foreign antigen",
+	vaccine:
+		"contains a weakend or dead verson of the antigen, to cause your body to build antibodies specifically agains that pathogen",
 };
 
 export let unit6_vocab = {
