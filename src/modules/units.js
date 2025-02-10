@@ -96,6 +96,18 @@ export let unit3_vocab = {
 		"movement of molecules across a concentration gradient from an area of low to high concentration",
 	"Channel Proteins":
 		"Embedded proteins in the cell membrane that act as doorways to allow moolecules to pass through",
+	Solvent: "Liquid in which solutes are dissolved",
+	Solute:
+		"a dissolved substance (Think of the salt in saltwater, or hot cocoa mix in hot cocoa",
+	Solution: "the combined mixture of solute and solvent",
+	"Hypertonic Solution":
+		"A solution in which there is a greater concentration of solutes on the outside of the cell, causing water to leave the cell",
+	"Hypotonic Solution":
+		"A solution in which there is a greater concetration of solutes on the inside of the cell, causing water to flow into the cell",
+	"Isotonic Solution":
+		"There is an equal concentration of solutes in an out of the cell, causing a net equal movement of water across the cell membrane",
+	Osmosis:
+		"A special type of diffusion that deals with movement of water across the cell membrane",
 };
 
 export let unit4_vocab = {
